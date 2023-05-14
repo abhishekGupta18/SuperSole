@@ -1,0 +1,87 @@
+.landing_page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.poster {
+  width: 100%;
+}
+
+.brands {
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.brand_img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.brandd_heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: poppins-regular;
+  text-decoration: underline;
+}
+
+.brandd_heading:hover {
+  transform: scale(1.2);
+}
+
+.category_heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: poppins-regular;
+}
+
+.category_heading:hover {
+  transform: scale(1.2);
+}
+.shop_by_category {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+.male_shoes {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.female_shoes {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.kid_shoes {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.category_img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.category_img:hover {
+  transform: scale(1.02);
+}
+.category_btn {
+  padding: 0.8rem 1rem;
+  width: 300px;
+  align-self: center;
+  background: none;
+  font-size: 1rem;
+  border: 0.5px solid black;
+  transition: all 0.5;
+}
+.category_btn:hover {
+  transform: scale(1.05);
+}

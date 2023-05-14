@@ -1,0 +1,40 @@
+.footer_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 5rem;
+  margin-bottom: 2rem;
+  background-color: #e5e7eb;
+  padding: 2rem;
+  margin: 0 1.5rem;
+  border-radius: 0.5rem;
+}
+.footer_sub_section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social_links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social_links h3 {
+  font-size: 1rem;
+  padding: 1rem 0 0.8rem 0;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+.links svg {
+  font-size: 2.5rem;
+}
+.links svg:hover {
+  transform: scale(1.05);
+}
