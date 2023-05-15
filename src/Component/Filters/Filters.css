@@ -1,0 +1,58 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 15rem;
+  padding: 0 1rem;
+  min-height: 100vh;
+  border-right: 1px solid black;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.clear_btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+.price_filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.price_filter input {
+  width: 10rem;
+}
+
+.category_filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.brand_filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rating_filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter_price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filters label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
