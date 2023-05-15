@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
 
@@ -6,10 +6,13 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 export const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className="navigation">
       <div className="nav_left">
-        <h3 className="logo">SuperSole</h3>
+        <h3 onClick={() => navigate("/")} className="logo">
+          SuperSole
+        </h3>
 
         <div className="nav_btn">
           <NavLink to="/products" className="explore_link">

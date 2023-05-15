@@ -6,6 +6,10 @@
   gap: 3rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  position: sticky;
+  inset: 0 0 100% 0;
+  z-index: 2;
+  background-color: #ffff;
 }
 
 .nav_left {
@@ -39,6 +43,7 @@
   font-size: 2rem;
   font-weight: 700;
   color: black;
+  cursor: pointer;
 }
 
 .explore_link {
@@ -117,125 +122,3 @@
     font-size: 1.5rem;
   }
 }
-/* .navigation {
-  width: 100%;
-  height: 9rem;
-  display: flex;
-  flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
-.logo {
-  font-size: 2rem;
-  font-weight: 700;
-  color: black;
-}
-.nav_left {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 1rem;
-  align-items: center;
-}
-.explore_link {
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: black;
-}
-.nav_right {
-  display: flex;
-  justify-content: center;
-}
-
-.login_btn {
-  padding: 0.3rem 0.5rem;
-  border: 1px solid black;
-  color: black;
-  background: #ffff;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  font-size: 0.8rem;
-}
-
-.nav_right input {
-  width: 20rem;
-  height: 2.5rem;
-  outline: none;
-  border-radius: 5px;
-  padding: 1rem;
-  font-weight: 700;
-  border: 2px solid black;
-}
-
-.nav_btn {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-.nav_btn svg {
-  color: black;
-}
-
-@media (max-width: 550px) {
-  .nav_right input {
-    width: 18rem;
-  }
-
-  .logo {
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-
-  .explore_link {
-    font-size: 0.8rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .navigation {
-    height: 9rem;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-    justify-content: center;
-  }
-  .nav_left {
-    display: flex;
-    gap: 3rem;
-  }
-  .nav_btn svg {
-    font-size: 2rem;
-    color: black;
-  }
-  .explore_link {
-    font-size: 1.5rem;
-  }
-  .login_btn {
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 0.5rem 0.8rem;
-    border: 2px solid black;
-  }
-  .nav_right input {
-    width: 100%;
-  }
-  .logo {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 1024px) {
-  .navigation {
-    display: flex;
-  }
-  .nav_left {
-    display: flex;
-    gap: 15rem;
-  }
-  .nav_btn {
-    gap: 4rem;
-  }
-  .nav_right input {
-    width: 35rem;
-    margin-right: 5rem;
-  }
-} */
