@@ -9,8 +9,8 @@
   position: sticky;
   inset: 0 0 100% 0;
   z-index: 2;
-  background-color: rgb(18, 18, 18);
-  color: #ffff;
+  background-color: #ffff;
+  color: black;
 }
 
 .nav_left {
@@ -43,31 +43,43 @@
 .logo {
   font-size: 2rem;
   font-weight: 700;
-
+  font-family: Nunito sans-serif;
   cursor: pointer;
-  font-family: "Inter", sans-serif;
+  letter-spacing: 0.2rem;
 }
 
 .explore_link {
   text-decoration: none;
   font-size: 1.5rem;
-  font-weight: 700;
-  color: #ffff;
+  font-weight: 900;
+  color: black;
+  font-family: Nunito sans-serif;
+  letter-spacing: 0.2rem;
+}
+.explore_link:hover {
+  color: #2563eb;
 }
 
 .login_btn {
   padding: 0.3rem 0.5rem;
-  /* border: 2px solid black; */
-
   background: #ffff;
+  color: black;
   border-radius: 0.8rem;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 1.2rem;
+  font-family: Nunito sans-serif;
+  letter-spacing: 0.2rem;
 }
-
+.login_btn:hover {
+  color: #2563eb;
+}
 .nav_btn svg {
   font-size: 1.8rem;
-  color: #ffff;
+  color: black;
+}
+.nav_btn svg:hover {
+  color: #2563eb;
+  transform: scale(1.05);
 }
 
 @media (max-width: 860px) {

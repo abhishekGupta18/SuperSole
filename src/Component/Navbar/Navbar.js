@@ -2,8 +2,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
 
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 export const Navbar = () => {
   const navigate = useNavigate();
@@ -21,11 +21,11 @@ export const Navbar = () => {
           <button className="login_btn">Login</button>
 
           <NavLink to="/wishlist">
-            <FavoriteBorderOutlinedIcon></FavoriteBorderOutlinedIcon>
+            <FavoriteOutlinedIcon></FavoriteOutlinedIcon>
           </NavLink>
 
           <NavLink to="/cart">
-            <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
+            <ShoppingCartIcon></ShoppingCartIcon>
           </NavLink>
         </div>
       </div>
