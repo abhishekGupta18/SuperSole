@@ -1,41 +1,58 @@
 .footer_section {
   display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 5rem;
-  margin-bottom: 2rem;
-  /* background-color: #e5e7eb; */
-  background-color: #93c5fd;
-  padding: 2rem;
-  margin: 0 1.5rem;
-  border-radius: 0.5rem;
+  background-color: #bfdbfe;
 }
-.footer_sub_section ul {
-  list-style: none;
+.social_links {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+.social_links h3 {
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+}
+.social_btn {
+  display: flex;
+  gap: 0.8rem;
+}
+.social_btn button {
+  background-color: none;
+  border: none;
+  color: #1d4ed8;
+  border-radius: 30%;
+}
+.tag_line {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.tag_line h2 {
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+}
+.tag_line p {
+  letter-spacing: 0.2rem;
 }
 
-.social_links {
+.policies {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-
-.social_links h3 {
-  font-size: 1rem;
-  padding: 1rem 0 0.8rem 0;
+.policies h3 {
+  letter-spacing: 0.2rem;
+  font-weight: 400;
 }
-
-.links {
+.policies ul {
   display: flex;
-  gap: 1rem;
-}
-.links svg {
-  font-size: 2.5rem;
-}
-.links svg:hover {
-  transform: scale(1.05);
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
 }

@@ -114,13 +114,13 @@
   .logo {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #ffff;
+    color: black;
   }
   .explore_link {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 700;
-    color: #ffff;
+    color: black;
   }
 
   .login_btn {
@@ -132,7 +132,7 @@
   }
 
   .nav_btn svg {
-    color: #ffff;
+    color: black;
     font-size: 1.5rem;
   }
 }
