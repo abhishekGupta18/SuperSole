@@ -1,0 +1,109 @@
+.shoes_card {
+  width: 15rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #d1d5db;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.shoes_card:hover {
+  transform: scale(1.02);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.image_container {
+  height: 12rem;
+  position: relative;
+}
+.image_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.wish_list_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  width: 2rem;
+  position: absolute;
+  inset: 0 0 100% 87%;
+  background-color: #0ea5e9;
+  border-bottom-left-radius: 0.5rem;
+  border: none;
+}
+.wish_list_btn svg {
+  color: #ffff;
+}
+.shoes_detail {
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.barnd_name {
+  text-align: center;
+  font-family: "Rokkitt", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.product_name {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.prices {
+  display: flex;
+  gap: 1.5rem;
+}
+.cur_price {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.orig_price {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  color: #64748b;
+}
+.rating_review {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffff;
+  background-color: #0ea5e9;
+  width: 6.2rem;
+  font-weight: 700;
+  position: absolute;
+  /* inset: 50% 90% 46% 0; */
+  left: 0;
+  bottom: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.add_cart_btn {
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ffff;
+  background-color: #3b82f6;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.add_cart_btn:hover {
+  background-color: #2563eb;
+}

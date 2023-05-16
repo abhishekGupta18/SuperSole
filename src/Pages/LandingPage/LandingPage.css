@@ -1,7 +1,12 @@
 .landing_page {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+}
+
+.not_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .poster {

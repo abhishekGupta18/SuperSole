@@ -23,7 +23,7 @@ export const Filters = () => {
         </label>
         <label htmlFor="">
           <input type="checkbox" />
-          kids
+          Kids
         </label>
       </div>
       <div className="brand_filter">
@@ -48,16 +48,16 @@ export const Filters = () => {
       <div className="rating_filter">
         <h3>Rating</h3>
         <label>
-          <input type="radio" name="ratingFilter" />4 stars and above
+          <input type="radio" name="ratingFilter" />4 stars & above
         </label>
         <label>
-          <input type="radio" name="ratingFilter" />3 stars and above
+          <input type="radio" name="ratingFilter" />3 stars & above
         </label>
         <label>
-          <input type="radio" name="ratingFilter" />2 stars and above
+          <input type="radio" name="ratingFilter" />2 stars & above
         </label>
         <label>
-          <input type="radio" name="ratingFilter" />1 stars and above
+          <input type="radio" name="ratingFilter" />1 stars & above
         </label>
       </div>
       <div className="filter_price">

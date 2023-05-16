@@ -1,9 +1,9 @@
 .filters {
   display: flex;
   flex-direction: column;
+  padding: 1.2rem;
   gap: 1rem;
   width: 15rem;
-  padding: 0 1rem;
   min-height: 100vh;
   border-right: 1px solid black;
 }

@@ -2,14 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
-  gap: 3rem;
+  padding: 1rem 2rem;
+  gap: 2rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   position: sticky;
   inset: 0 0 100% 0;
   z-index: 2;
-  background-color: #ffff;
+  background-color: rgb(18, 18, 18);
+  color: #ffff;
 }
 
 .nav_left {
@@ -42,21 +43,22 @@
 .logo {
   font-size: 2rem;
   font-weight: 700;
-  color: black;
+
   cursor: pointer;
+  font-family: "Inter", sans-serif;
 }
 
 .explore_link {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 700;
-  color: black;
+  color: #ffff;
 }
 
 .login_btn {
   padding: 0.3rem 0.5rem;
-  border: 2px solid black;
-  color: black;
+  /* border: 2px solid black; */
+
   background: #ffff;
   border-radius: 0.8rem;
   font-weight: 700;
@@ -64,8 +66,8 @@
 }
 
 .nav_btn svg {
-  color: black;
   font-size: 1.8rem;
+  color: #ffff;
 }
 
 @media (max-width: 860px) {
@@ -100,13 +102,13 @@
   .logo {
     font-size: 1.5rem;
     font-weight: 600;
-    color: black;
+    color: #ffff;
   }
   .explore_link {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 700;
-    color: black;
+    color: #ffff;
   }
 
   .login_btn {
@@ -118,7 +120,7 @@
   }
 
   .nav_btn svg {
-    color: black;
+    color: #ffff;
     font-size: 1.5rem;
   }
 }
