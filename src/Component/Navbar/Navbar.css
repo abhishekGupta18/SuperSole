@@ -115,6 +115,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     color: black;
+    letter-spacing: 0rem;
   }
   .explore_link {
     text-decoration: none;
@@ -134,5 +135,11 @@
   .nav_btn svg {
     color: black;
     font-size: 1.5rem;
+  }
+  .login_btn {
+    letter-spacing: 0rem;
+  }
+  .explore_link {
+    letter-spacing: 0rem;
   }
 }

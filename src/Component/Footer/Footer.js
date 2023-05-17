@@ -41,14 +41,15 @@ export const Footer = () => {
       </div>
       <p
         style={{
-          fontWeight: "700",
+          fontWeight: "500",
           display: "flex",
           justifyContent: "center",
+          flexWrap: "wrap",
           padding: "1rem",
           alignItems: "center",
         }}
       >
-        Copyright ©2023 All rights reserved | This template is made with by{" "}
+        Copyright ©2023 All rights reserved | This template is made by{" "}
         <span style={{ color: "#2563eb" }}>Abhishek Gupta❤️</span>
       </p>
     </div>

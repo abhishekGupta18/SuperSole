@@ -2,8 +2,8 @@
   display: flex;
   gap: 2rem;
   justify-content: space-between;
-  align-items: center;
-  padding: 3rem;
+  align-items: flex-start;
+  padding: 3rem 5rem;
   flex-wrap: wrap;
   background-color: #bfdbfe;
 }
@@ -18,6 +18,7 @@
 }
 .social_btn {
   display: flex;
+  justify-content: center;
   gap: 0.8rem;
 }
 .social_btn button {
@@ -43,7 +44,7 @@
 .policies {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 .policies h3 {
@@ -53,6 +54,18 @@
 .policies ul {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.5rem;
   list-style: none;
+}
+
+@media (max-width: 950px) {
+  .footer_section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .tag_line {
+    order: 3;
+  }
 }

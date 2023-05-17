@@ -19,6 +19,7 @@ export const products = [
     for: "Men",
     inStock: true,
     reviews: "2.4k",
+    delivery: "in 6 days",
   },
   {
     id: uuid(),
@@ -33,6 +34,7 @@ export const products = [
     for: "Men",
     inStock: true,
     reviews: "1.3k",
+    delivery: "in 6 days",
   },
   {
     id: uuid(),
@@ -47,6 +49,7 @@ export const products = [
     for: "Men",
     inStock: false,
     reviews: "3.3k",
+    delivery: "in 2 days",
   },
 
   {
@@ -62,6 +65,7 @@ export const products = [
     for: "Men",
     inStock: true,
     reviews: "5.5k",
+    delivery: "in 3 days",
   },
 
   // women sneakers
@@ -78,6 +82,7 @@ export const products = [
     for: "Women",
     inStock: true,
     reviews: "1.1k",
+    delivery: "in 1 days",
   },
   {
     id: uuid(),
@@ -92,6 +97,7 @@ export const products = [
     for: "Women",
     inStock: false,
     reviews: "6.3k",
+    delivery: "in 4 days",
   },
   {
     id: uuid(),
@@ -106,6 +112,7 @@ export const products = [
     for: "Women",
     inStock: true,
     reviews: "205",
+    delivery: "in 3 days",
   },
   {
     id: uuid(),
@@ -120,6 +127,7 @@ export const products = [
     for: "Women",
     inStock: true,
     reviews: "3.0k",
+    delivery: "in 6 days",
   },
 
   // kids sneakers
@@ -136,6 +144,7 @@ export const products = [
     for: "Kids",
     inStock: true,
     reviews: "2.1k",
+    delivery: "in 1 days",
   },
   {
     id: uuid(),
@@ -150,6 +159,7 @@ export const products = [
     for: "Kids",
     inStock: false,
     reviews: "6.3k",
+    delivery: "in 1 days",
   },
   {
     id: uuid(),
@@ -164,6 +174,7 @@ export const products = [
     for: "Kids",
     inStock: false,
     reviews: "505",
+    delivery: "in 2 days",
   },
   {
     id: uuid(),
@@ -178,6 +189,7 @@ export const products = [
     for: "Kids",
     inStock: true,
     reviews: "8.9k",
+    delivery: "in 1 days",
   },
 
   // Sports Shoes for mens
@@ -195,6 +207,7 @@ export const products = [
     for: "Mens",
     inStock: true,
     reviews: "1.02k",
+    delivery: "in 3 days",
   },
   {
     id: uuid(),
@@ -209,6 +222,7 @@ export const products = [
     for: "Mens",
     inStock: true,
     reviews: "6.9k",
+    delivery: "in 2 days",
   },
   {
     id: uuid(),
@@ -223,6 +237,7 @@ export const products = [
     for: "Mens",
     inStock: false,
     reviews: "202",
+    delivery: "in 5 days",
   },
   {
     id: uuid(),
@@ -237,6 +252,7 @@ export const products = [
     for: "Mens",
     inStock: true,
     reviews: "198",
+    delivery: "in 4 days",
   },
 
   // sports shoes for womens
@@ -253,6 +269,7 @@ export const products = [
     for: "Womens",
     inStock: true,
     reviews: "6.3k",
+    delivery: "in 3 days",
   },
   {
     id: uuid(),
@@ -267,6 +284,7 @@ export const products = [
     for: "Womens",
     inStock: true,
     reviews: "4.5k",
+    delivery: "in 2 days",
   },
   {
     id: uuid(),
@@ -281,6 +299,7 @@ export const products = [
     for: "Womens",
     inStock: true,
     reviews: "100",
+    delivery: "in 1 days",
   },
   {
     id: uuid(),
@@ -295,6 +314,7 @@ export const products = [
     for: "Womens",
     inStock: true,
     reviews: "9.3k",
+    delivery: "in 4 days",
   },
 
   // sports shoes for kids
@@ -311,6 +331,7 @@ export const products = [
     for: "Kids",
     inStock: true,
     reviews: "2.1k",
+    delivery: "in 5 days",
   },
   {
     id: uuid(),
@@ -325,6 +346,7 @@ export const products = [
     for: "Kids",
     inStock: false,
     reviews: "1.8k",
+    delivery: "in 1 days",
   },
   {
     id: uuid(),
@@ -339,6 +361,7 @@ export const products = [
     for: "Kids",
     inStock: true,
     reviews: "7.1k",
+    delivery: "in 2 days",
   },
   {
     id: uuid(),
@@ -353,6 +376,7 @@ export const products = [
     for: "Kids",
     inStock: true,
     reviews: "969",
+    delivery: "in 6 days",
   },
   // boots for mens
   {
@@ -368,6 +392,7 @@ export const products = [
     for: "Mens",
     inStock: true,
     reviews: "4.3k",
+    delivery: "in 7 days",
   },
 
   {
@@ -383,6 +408,7 @@ export const products = [
     for: "Mens",
     inStock: true,
     reviews: "8.1k",
+    delivery: "in 6 days",
   },
   {
     id: uuid(),
@@ -397,6 +423,7 @@ export const products = [
     for: "Mens",
     inStock: false,
     reviews: "7.2k",
+    delivery: "in 1 days",
   },
   {
     id: uuid(),
@@ -411,6 +438,7 @@ export const products = [
     for: "Mens",
     inStock: true,
     reviews: "63",
+    delivery: "in 2 days",
   },
 
   // boots for womens
@@ -427,6 +455,7 @@ export const products = [
     for: "Womens",
     inStock: true,
     reviews: "2.4k",
+    delivery: "in 6 days",
   },
   {
     id: uuid(),
@@ -441,6 +470,7 @@ export const products = [
     for: "Womens",
     inStock: true,
     reviews: "96",
+    delivery: "in 2 days",
   },
   {
     id: uuid(),
@@ -455,6 +485,7 @@ export const products = [
     for: "Womens",
     inStock: false,
     reviews: "1.5k",
+    delivery: "in 3 days",
   },
   {
     id: uuid(),
@@ -469,6 +500,7 @@ export const products = [
     for: "Womens",
     inStock: false,
     reviews: "2k",
+    delivery: "in 2 days",
   },
 
   // boots for kids
@@ -485,6 +517,7 @@ export const products = [
     for: "kids",
     inStock: true,
     reviews: "5.6k",
+    delivery: "in 1 days",
   },
   {
     id: uuid(),
@@ -499,6 +532,7 @@ export const products = [
     for: "kids",
     inStock: true,
     reviews: "5.1k",
+    delivery: "in 2 days",
   },
   {
     id: uuid(),
@@ -513,5 +547,6 @@ export const products = [
     for: "kids",
     inStock: true,
     reviews: "66",
+    delivery: "in 4 days",
   },
 ];

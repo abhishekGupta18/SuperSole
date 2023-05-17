@@ -6,11 +6,13 @@ import { LandingPage } from "./Pages/LandingPage/LandingPage";
 import { ProductsPage } from "./Pages/ProductsPage/ProductsPage";
 import { CartPage } from "./Pages/CartPage/CartPage";
 import { WishlistPage } from "./Pages/WishlistPage/WishlistPage";
+import { ProductDetail } from "./Pages/ProductDetails/ProductDetails";
 
 function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path="/detail" element={<ProductDetail />} />
         <Route path="/" element={<LandingPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/cart" element={<CartPage />} />

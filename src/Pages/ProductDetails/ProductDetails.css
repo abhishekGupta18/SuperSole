@@ -1,0 +1,111 @@
+.detail_page {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+.product_detail {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 1rem 0;
+}
+.img_container {
+  flex-basis: 40%;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.img_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  padding: 0 1rem;
+}
+
+.add_to_wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 1.5rem;
+  width: 2rem;
+  position: absolute;
+  inset: 0 0 100% 0;
+  background-color: #0ea5e9;
+  /* border-bottom-right-radius: 0.5rem; */
+  border: none;
+}
+.add_to_wishlist svg {
+  color: #ffff;
+  font-size: 2rem;
+}
+.star_rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 5rem;
+  inset: 90% 0 0 0;
+  position: absolute;
+  background-color: #0ea5e9;
+  color: #ffff;
+  font-size: 1.2rem;
+  border: none;
+  /* border-top-right-radius: 0.5rem; */
+}
+.star_rating svg {
+  color: #ffff;
+  font-size: 1.8rem;
+}
+
+.shoes_details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-basis: 40%;
+}
+
+.shoe_detail_brand {
+  font-size: 2rem;
+  font-family: "Rokkitt", Georgia, serif;
+}
+
+.product_detail_prices {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.add_cart {
+  width: 50%;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ffff;
+  background-color: #3b82f6;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.add_cart:hover {
+  background-color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .product_detail {
+    flex-direction: column;
+    padding: 0;
+  }
+  .shoes_details {
+    align-items: center;
+  }
+  .shoe_detail_name {
+    text-align: center;
+  }
+}
