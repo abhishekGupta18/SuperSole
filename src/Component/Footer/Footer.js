@@ -31,11 +31,12 @@ export const Footer = () => {
           <p>The essence of perfect shoes.</p>
         </div>
         <div className="policies">
-          <h3>POLICIES</h3>
+          <h3>QUICK LINKS</h3>
           <ul>
-            <li>Terms & Conditions</li>
-            <li>Shipping & Return Policy</li>
-            <li>Privacy Policy</li>
+            <li>Home</li>
+            <li>Explore</li>
+            <li>Cart</li>
+            <li>Wishlist</li>
           </ul>
         </div>
       </div>
@@ -47,6 +48,7 @@ export const Footer = () => {
           flexWrap: "wrap",
           padding: "1rem",
           alignItems: "center",
+          textAlign: "center",
         }}
       >
         Copyright ©2023 All rights reserved | This template is made by{" "}

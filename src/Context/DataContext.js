@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 export const ShoesContext = createContext();
 
 export const ShoesContextProvider = ({ children }) => {
+  const [showFilters, setShowFilters] = useState(true);
   const [shoesData, setShoesData] = useState([]);
 
   const getData = async () => {
@@ -20,8 +21,14 @@ export const ShoesContextProvider = ({ children }) => {
     getData();
   }, []);
 
+  const showFiltersHandler = () => {
+    setShowFilters(!showFilters);
+  };
+
   return (
-    <ShoesContext.Provider value={{ shoesData }}>
+    <ShoesContext.Provider
+      value={{ shoesData, showFilters, showFiltersHandler }}
+    >
       {children}
     </ShoesContext.Provider>
   );

@@ -1,6 +1,3 @@
-import { Navbar } from "../../Component/Navbar/Navbar";
-import { Footer } from "../../Component/Footer/Footer";
-
 import "./LandingPage.css";
 
 import shoesPoster from "../../Asset/poster1.png";
@@ -21,7 +18,6 @@ import kidShoes from "../../Asset/kids-shoes.jpg";
 export const LandingPage = () => {
   return (
     <div className="landing_page">
-      <Navbar />
       <div className="not_nav">
         <div>
           <img className="poster" src={shoesPoster2} alt="poster" />
@@ -54,7 +50,6 @@ export const LandingPage = () => {
         </div>
         <img src={shoesPoster} alt="" />
         <hr />
-        <Footer />
       </div>
     </div>
   );

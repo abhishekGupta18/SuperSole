@@ -35,6 +35,7 @@
   background-color: #0ea5e9;
   border-bottom-left-radius: 0.5rem;
   border: none;
+  cursor: pointer;
 }
 .wish_list_btn svg {
   color: #ffff;
@@ -54,6 +55,14 @@
 .product_name {
   font-size: 0.8rem;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.product_name:hover {
+  display: block;
 }
 
 .prices {
@@ -103,6 +112,7 @@
   border: none;
   font-size: 1rem;
   font-weight: 700;
+  cursor: pointer;
 }
 .add_cart_btn:hover {
   background-color: #2563eb;

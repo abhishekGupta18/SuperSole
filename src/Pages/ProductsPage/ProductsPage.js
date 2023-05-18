@@ -4,23 +4,32 @@ import { ShoesCard } from "../../Component/ShoesCard/ShoesCard";
 import "./ProductsPage.css";
 
 import { Filters } from "../../Component/Filters/Filters";
-import { Navbar } from "../../Component/Navbar/Navbar";
+
+import TuneIcon from "@mui/icons-material/Tune";
+
 export const ProductsPage = () => {
-  const { shoesData } = useShoesContext();
+  const { shoesData, showFiltersHandler } = useShoesContext();
   return (
-    <div className="product_page">
-      <Navbar />
-      <div className="products_list">
+    <div className="products_list">
+      <div className="products_filters">
+        {" "}
         <Filters />
-        <div className="produtsItems">
-          <ul>
-            {shoesData?.map((item) => (
-              <li>
-                <ShoesCard {...item} />
-              </li>
-            ))}
-          </ul>
+      </div>
+
+      <div className="products_Items">
+        <div className="products_list_heading">
+          <h3>Showing All Shoes</h3>
+          <button className="tuneIcon_btn" onClick={() => showFiltersHandler()}>
+            <TuneIcon />
+          </button>
         </div>
+        <ul>
+          {shoesData?.map((item) => (
+            <li>
+              <ShoesCard {...item} />
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

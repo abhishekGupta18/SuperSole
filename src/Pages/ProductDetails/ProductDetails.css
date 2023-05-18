@@ -36,6 +36,7 @@
   background-color: #0ea5e9;
   /* border-bottom-right-radius: 0.5rem; */
   border: none;
+  cursor: pointer;
 }
 .add_to_wishlist svg {
   color: #ffff;
@@ -92,6 +93,7 @@
   border: none;
   font-size: 1rem;
   font-weight: 700;
+  cursor: pointer;
 }
 .add_cart:hover {
   background-color: #2563eb;

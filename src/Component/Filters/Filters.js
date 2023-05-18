@@ -1,11 +1,18 @@
+import { useShoesContext } from "../../Context/DataContext";
 import "./Filters.css";
 
+import CancelIcon from "@mui/icons-material/Cancel";
+
 export const Filters = () => {
+  const { showFilters, showFiltersHandler } = useShoesContext();
   return (
-    <div className="filters">
+    <div className={showFilters ? `filters ` : `mobile_filters filters `}>
       <div className="options">
         <h3>Filters</h3>
         <button className="clear_btn">Clear</button>
+        <button className="cancel_btn" onClick={() => showFiltersHandler()}>
+          <CancelIcon />
+        </button>
       </div>
       <div className="price_filter">
         <h3>Price</h3>
