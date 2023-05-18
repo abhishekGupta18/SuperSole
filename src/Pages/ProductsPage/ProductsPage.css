@@ -29,6 +29,11 @@
 @media (max-width: 768px) {
   .tuneIcon_btn {
     display: block;
+    background: none;
+    border: none;
+  }
+  .tuneIcon_btn svg {
+    font-size: 1.5rem;
   }
   .products_Items {
     flex-basis: 0%;

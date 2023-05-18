@@ -9,15 +9,19 @@ export const Filters = () => {
     <div className={showFilters ? `filters ` : `mobile_filters filters `}>
       <div className="options">
         <h3>Filters</h3>
-        <button className="clear_btn">Clear</button>
-        <button className="cancel_btn" onClick={() => showFiltersHandler()}>
-          <CancelIcon />
-        </button>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <button className="clear_btn">CLEAR</button>
+          <button className="cancel_btn" onClick={() => showFiltersHandler()}>
+            <CancelIcon />
+          </button>
+        </div>
       </div>
+      <hr />
       <div className="price_filter">
         <h3>Price</h3>
         <input type="range" />
       </div>
+      <hr />
       <div className="category_filter">
         <h3>Categories</h3>
         <label htmlFor="">
@@ -33,6 +37,7 @@ export const Filters = () => {
           Kids
         </label>
       </div>
+      <hr />
       <div className="brand_filter">
         <h3>Brands</h3>
         <label>
@@ -52,21 +57,12 @@ export const Filters = () => {
           Puma
         </label>
       </div>
+      <hr />
       <div className="rating_filter">
         <h3>Rating</h3>
-        <label>
-          <input type="radio" name="ratingFilter" />4 stars & above
-        </label>
-        <label>
-          <input type="radio" name="ratingFilter" />3 stars & above
-        </label>
-        <label>
-          <input type="radio" name="ratingFilter" />2 stars & above
-        </label>
-        <label>
-          <input type="radio" name="ratingFilter" />1 stars & above
-        </label>
+        <input type="range" name="" id="" />
       </div>
+      <hr />
       <div className="filter_price">
         <h3>Sort By price</h3>
         <label>
