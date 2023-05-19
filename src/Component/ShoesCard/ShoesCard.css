@@ -89,7 +89,6 @@
   width: 6.2rem;
   font-weight: 700;
   position: absolute;
-  /* inset: 50% 90% 46% 0; */
   left: 0;
   bottom: 0;
   border-top-right-radius: 0.5rem;
@@ -116,4 +115,18 @@
 }
 .add_cart_btn:hover {
   background-color: #2563eb;
+}
+
+@media (max-width: 543px) {
+  .shoes_card {
+    width: 20rem;
+    gap: 1.3rem;
+  }
+
+  .image_container {
+    height: 15rem;
+  }
+  .wish_list_btn {
+    inset: 0 0 100% 90%;
+  }
 }
