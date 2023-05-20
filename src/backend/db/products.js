@@ -7,7 +7,7 @@ import { v4 as uuid } from "uuid";
 
 export const products = [
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Grandstand II Shoe Sneakers For Men  (White)",
     brand: "NIKE",
     image:
@@ -22,7 +22,7 @@ export const products = [
     delivery: "in 6 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "EASY VULC 2.0 SS 19 Sneakers For Men  (Blue)",
     brand: "ADIDAS",
     image:
@@ -37,7 +37,7 @@ export const products = [
     delivery: "in 6 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Vidal E Sneakers For Men  (Black)",
     brand: "BATA",
     image:
@@ -53,7 +53,7 @@ export const products = [
   },
 
   {
-    id: uuid(),
+    _id: uuid(),
     name: "RS-Z Reinvention Sneakers For Men  (Grey)",
     brand: "PUMA",
     image:
@@ -70,7 +70,7 @@ export const products = [
 
   // women sneakers
   {
-    id: uuid(),
+    _id: uuid(),
     name: "W NKDOWNSHIFTER 12 Sneakers For Women  (White)",
     brand: "NIKE",
     image:
@@ -85,7 +85,7 @@ export const products = [
     delivery: "in 1 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "VULC RAID3R Sneakers For Women  (White)",
     brand: "ADIDAS",
     image:
@@ -100,7 +100,7 @@ export const products = [
     delivery: "in 4 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Sneakers For Women  (Blue)",
     brand: "BATA",
     image:
@@ -115,7 +115,7 @@ export const products = [
     delivery: "in 3 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Ivana Wn's Sneakers For Women  (Blue)",
     brand: "PUMA",
     image:
@@ -132,7 +132,7 @@ export const products = [
 
   // kids sneakers
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Slip on Sneakers For Boys & Girls  (Yellow)",
     brand: "NIKE",
     image:
@@ -147,7 +147,7 @@ export const products = [
     delivery: "in 1 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Lace Sneakers For Boys & Girls  (Black)",
     brand: "Adidas",
     image:
@@ -162,7 +162,7 @@ export const products = [
     delivery: "in 1 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Lace Sneakers For Boys & Girls  (Red)",
     brand: "PUMA",
     image:
@@ -177,7 +177,7 @@ export const products = [
     delivery: "in 2 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Velcro Casual Shoes For Boys  (White)",
     brand: "Bata",
     image:
@@ -195,7 +195,7 @@ export const products = [
   // Sports Shoes for mens
 
   {
-    id: uuid(),
+    _id: uuid(),
     name: "NK Flex Control 4 Men's Training Shoes Training & Gym Shoes For Men  (Blue)",
     brand: "Nike",
     image:
@@ -210,7 +210,7 @@ export const products = [
     delivery: "in 3 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Harquin M Running Shoes For Men  (Black)",
     brand: "Adidas",
     image:
@@ -225,7 +225,7 @@ export const products = [
     delivery: "in 2 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Sports and Oudoor Lace Up Shoes Running Shoes For Men  (Beige)",
     brand: "Bata",
     image:
@@ -240,7 +240,7 @@ export const products = [
     delivery: "in 5 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Hustle V2 Running Shoes For Men  (Black)",
     brand: "Puma",
     image:
@@ -257,7 +257,7 @@ export const products = [
 
   // sports shoes for womens
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Amalgo W Running Shoes For Women  (Pink)",
     brand: "Adidas",
     image:
@@ -272,7 +272,7 @@ export const products = [
     delivery: "in 3 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Amalgo W Running Shoes For Women  (Pink)",
     brand: "Nike",
     image:
@@ -287,7 +287,7 @@ export const products = [
     delivery: "in 2 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Indoor and outdoor womens sports runninng Shoes For Women  (Maroon)",
     brand: "Bata",
     image:
@@ -302,7 +302,7 @@ export const products = [
     delivery: "in 1 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Softride Enzo NXT Wn's Running Shoes For Women  (Grey)",
     brand: "Puma",
     image:
@@ -319,7 +319,7 @@ export const products = [
 
   // sports shoes for kids
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Lace Running Shoes For Boys & Girls  (Red)",
     brand: "Adidas",
     image:
@@ -334,7 +334,7 @@ export const products = [
     delivery: "in 5 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Lace Running Shoes For Boys  (Black)",
     brand: "Bata",
     image:
@@ -349,7 +349,7 @@ export const products = [
     delivery: "in 1 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Slip on Running Shoes For Boys and Girls (Black)",
     brand: "Nike",
     image:
@@ -364,7 +364,7 @@ export const products = [
     delivery: "in 2 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Lace Football Shoes For Boys & Girls  (Black)",
     brand: "Puma",
     image:
@@ -380,7 +380,7 @@ export const products = [
   },
   // boots for mens
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Rock Casual High Tops For Men  (Black)",
     brand: "Puma",
     image:
@@ -396,7 +396,7 @@ export const products = [
   },
 
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Boots For Men  (Brown)",
     brand: "Bata",
     image:
@@ -411,7 +411,7 @@ export const products = [
     delivery: "in 6 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Boots For Men  (Black)",
     brand: "Nike",
     image:
@@ -426,7 +426,7 @@ export const products = [
     delivery: "in 1 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Boots For Men  (Khaki)",
     brand: "Adidas",
     image:
@@ -443,7 +443,7 @@ export const products = [
 
   // boots for womens
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Boots For Women  (Black)",
     brand: "Bata",
     image:
@@ -458,7 +458,7 @@ export const products = [
     delivery: "in 6 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Stylish casual partywear women heeled boots Boots For Women  (Brown)",
     brand: "Adidas",
     image:
@@ -473,7 +473,7 @@ export const products = [
     delivery: "in 2 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Ankle Boots for Women's Boots For Women  (Black)",
     brand: "Nike",
     image:
@@ -488,7 +488,7 @@ export const products = [
     delivery: "in 3 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Boots For Women  (Black)",
     brand: "Puma",
     image:
@@ -505,7 +505,7 @@ export const products = [
 
   // boots for kids
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Lace Casual Boots For Boys  (Brown)",
     brand: "Bata",
     image:
@@ -520,7 +520,7 @@ export const products = [
     delivery: "in 1 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Lace Casual Boots For Boys  (Brown)",
     brand: "Adidas",
     image:
@@ -535,7 +535,7 @@ export const products = [
     delivery: "in 2 days",
   },
   {
-    id: uuid(),
+    _id: uuid(),
     name: "Lace Casual Boots For Boys  (Black)",
     brand: "Nike",
     image:

@@ -19,7 +19,7 @@ export const Filters = () => {
       <hr />
       <div className="price_filter">
         <h3>Price</h3>
-        <input type="range" />
+        <input type="range" min="0" max="8000" />
       </div>
       <hr />
       <div className="category_filter">

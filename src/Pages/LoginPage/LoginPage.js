@@ -16,7 +16,7 @@ export const LoginPage = () => {
         <button className="login">Login</button>
         <button className="login_as_guest">Login as guest</button>
         <p>
-          Don't have an account? <NavLink>Sign up</NavLink>
+          Don't have an account? <NavLink to="/signUp">Sign up</NavLink>
         </p>
       </div>
     </div>

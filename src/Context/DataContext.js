@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createContext } from "react";
 import { useContext, useEffect, useState } from "react";
 
@@ -10,9 +11,10 @@ export const ShoesContextProvider = ({ children }) => {
 
   const getData = async () => {
     try {
-      const response = await fetch("/api/products");
-      const jsonData = await response.json();
-      setShoesData(jsonData?.products);
+      const response = await axios({ method: "get", url: "/api/products" });
+      if (response?.status === 200) {
+        setShoesData(response?.data?.products);
+      }
     } catch (e) {
       console.log(e);
     }
