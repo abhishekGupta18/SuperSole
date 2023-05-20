@@ -5,6 +5,7 @@ export const ShoesContext = createContext();
 
 export const ShoesContextProvider = ({ children }) => {
   const [showFilters, setShowFilters] = useState(true);
+
   const [shoesData, setShoesData] = useState([]);
 
   const getData = async () => {

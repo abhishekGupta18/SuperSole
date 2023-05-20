@@ -60,7 +60,7 @@ export const Filters = () => {
       <hr />
       <div className="rating_filter">
         <h3>Rating</h3>
-        <input type="range" name="" id="" />
+        <input type="range" min="0" max="5" />
       </div>
       <hr />
       <div className="filter_price">

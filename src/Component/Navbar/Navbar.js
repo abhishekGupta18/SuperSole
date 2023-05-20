@@ -18,7 +18,10 @@ export const Navbar = () => {
           <NavLink to="/products" className="explore_link">
             Explore
           </NavLink>
-          <button className="login_btn">Login</button>
+          <NavLink to="/login">
+            {" "}
+            <button className="login_btn">Login</button>
+          </NavLink>
 
           <NavLink to="/wishlist">
             <FavoriteOutlinedIcon></FavoriteOutlinedIcon>

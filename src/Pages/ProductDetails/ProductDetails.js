@@ -1,6 +1,5 @@
 import { v4 as uuid } from "uuid";
 
-import { Navbar } from "../../Component/Navbar/Navbar";
 import "./ProductDetails.css";
 
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
@@ -25,7 +24,6 @@ export const ProductDetail = () => {
   };
   return (
     <div className="detail_page">
-      <Navbar />
       <div className="product_detail">
         <div className="img_container">
           <img src={singleProduct.image} alt="shoes" />
