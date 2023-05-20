@@ -1,7 +1,11 @@
+import "./CartPage.css";
+import { CardCart } from "../../Component/CartCart/CardCart";
 export const CartPage = () => {
   return (
-    <>
-      <h1>This is cart page</h1>
-    </>
+    <div className="cart_page">
+      <div>
+        <CardCart />
+      </div>
+    </div>
   );
 };
