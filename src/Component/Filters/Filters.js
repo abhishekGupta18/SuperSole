@@ -1,10 +1,14 @@
 import { useShoesContext } from "../../Context/DataContext";
+import { useFilterContext } from "../../Context/FiltersContext";
+
 import "./Filters.css";
 
 import CancelIcon from "@mui/icons-material/Cancel";
 
 export const Filters = () => {
   const { showFilters, showFiltersHandler } = useShoesContext();
+  const { filterDispatch } = useFilterContext();
+
   return (
     <div className={showFilters ? `filters ` : `mobile_filters filters `}>
       <div className="options">
@@ -20,20 +24,42 @@ export const Filters = () => {
       <div className="price_filter">
         <h3>Price</h3>
         <input type="range" min="0" max="8000" />
+        <datalist id="steplist">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </datalist>
       </div>
       <hr />
       <div className="category_filter">
         <h3>Categories</h3>
         <label htmlFor="">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onClick={() =>
+              filterDispatch({ type: "filter_by_category", payload: "Men" })
+            }
+          />
           Men
         </label>
         <label htmlFor="">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onClick={() =>
+              filterDispatch({ type: "filter_by_category", payload: "Women" })
+            }
+          />
           Women
         </label>
         <label htmlFor="">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onClick={() =>
+              filterDispatch({ type: "filter_by_category", payload: "Kids" })
+            }
+          />
           Kids
         </label>
       </div>
@@ -41,19 +67,39 @@ export const Filters = () => {
       <div className="brand_filter">
         <h3>Brands</h3>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onClick={() =>
+              filterDispatch({ type: "filter_by_brand", payload: "Nike" })
+            }
+          />
           Nike
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onClick={() =>
+              filterDispatch({ type: "filter_by_brand", payload: "Adidas" })
+            }
+          />
           Adidas
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onClick={() =>
+              filterDispatch({ type: "filter_by_brand", payload: "Bata" })
+            }
+          />
           Bata
         </label>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onClick={() =>
+              filterDispatch({ type: "filter_by_brand", payload: "Puma" })
+            }
+          />
           Puma
         </label>
       </div>
@@ -66,11 +112,24 @@ export const Filters = () => {
       <div className="filter_price">
         <h3>Sort By price</h3>
         <label>
-          <input type="radio" name="sortByPrice" />
+          <input
+            type="radio"
+            name="sortByPrice"
+            onClick={() =>
+              filterDispatch({ type: "sort_by_price", payload: "lowToHigh" })
+            }
+          />
           Low To High
         </label>
         <label>
-          <input type="radio" name="sortByPrice" /> High To Low
+          <input
+            type="radio"
+            name="sortByPrice"
+            onClick={() =>
+              filterDispatch({ type: "sort_by_price", payload: "highToLow" })
+            }
+          />{" "}
+          High To Low
         </label>
       </div>
     </div>

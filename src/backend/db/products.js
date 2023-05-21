@@ -246,7 +246,7 @@ export const products = [
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/h/n/u/-original-imaghy4hpgfkemn9.jpeg?q=70",
     category: "Sports shoes",
-    price: "7999",
+    price: "7025",
     originalPrice: "12000",
     rating: "4.8",
     for: "Men",

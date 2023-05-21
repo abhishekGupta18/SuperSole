@@ -10,18 +10,18 @@ export const categories = [
     _id: uuid(),
     categoryName: "Men",
     description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+      "Men's shoes are footwear designed specifically for males, offering comfort, style, and functionality.",
   },
   {
     _id: uuid(),
     categoryName: "Women",
     description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+      "Women's shoes are footwear designed specifically for females, offering a combination of style, comfort, and versatility.",
   },
   {
     _id: uuid(),
     categoryName: "Kids",
     description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+      "Kids' shoes are footwear specially designed for children, prioritizing their comfort, support, and safety as they grow and engage in various activities. ",
   },
 ];

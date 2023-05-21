@@ -1,5 +1,6 @@
 import { useShoesContext } from "../../Context/DataContext";
 import { ShoesCard } from "../../Component/ShoesCard/ShoesCard";
+import { useFilterContext } from "../../Context/FiltersContext";
 
 import "./ProductsPage.css";
 
@@ -8,7 +9,8 @@ import { Filters } from "../../Component/Filters/Filters";
 import TuneIcon from "@mui/icons-material/Tune";
 
 export const ProductsPage = () => {
-  const { shoesData, showFiltersHandler } = useShoesContext();
+  const { state, showFiltersHandler } = useShoesContext();
+  const { sortFilterData } = useFilterContext();
   return (
     <div className="products_list">
       <div className="products_filters">
@@ -24,7 +26,7 @@ export const ProductsPage = () => {
           </button>
         </div>
         <ul>
-          {shoesData?.map((item) => (
+          {sortFilterData?.map((item) => (
             <li>
               <ShoesCard {...item} />
             </li>
