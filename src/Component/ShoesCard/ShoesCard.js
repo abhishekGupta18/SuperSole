@@ -1,10 +1,12 @@
+import { NavLink } from "react-router-dom";
+
 import "./ShoesCard.css";
 
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 export const ShoesCard = ({
-  id,
+  _id,
   name,
   brand,
   image,
@@ -15,7 +17,7 @@ export const ShoesCard = ({
   reviews,
 }) => {
   return (
-    <div className="shoes_card">
+    <NavLink className="shoes_card" to={`/shoeDetails/${_id}`}>
       <div className="image_container">
         <img src={image} alt="shoes" />
         <div className="rating_review">
@@ -37,11 +39,11 @@ export const ShoesCard = ({
           <p className="orig_price">₹{originalPrice}</p>
         </div>
 
-        <button className="add_cart_btn">
+        <button className="add_cart_btn" onClick={(e) => e.preventDefault()}>
           <ShoppingCartIcon />
           Add to cart
         </button>
       </div>
-    </div>
+    </NavLink>
   );
 };

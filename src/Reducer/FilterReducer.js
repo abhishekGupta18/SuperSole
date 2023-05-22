@@ -21,5 +21,24 @@ export const filterReducer = (filterState, action) => {
         ...filterState,
         sort: action.payload,
       };
+
+    case "filter_by_rating":
+      return {
+        ...filterState,
+        rating: action.payload,
+      };
+    case "filter_by_price":
+      return {
+        ...filterState,
+        price: action.payload,
+      };
+    case "clear_filters":
+      return {
+        category: [],
+        brands: [],
+        sort: "",
+        rating: 1,
+        price: 0,
+      };
   }
 };

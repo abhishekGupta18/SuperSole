@@ -10,7 +10,7 @@ import TuneIcon from "@mui/icons-material/Tune";
 
 export const ProductsPage = () => {
   const { state, showFiltersHandler } = useShoesContext();
-  const { sortFilterData } = useFilterContext();
+  const { priceFilterData } = useFilterContext();
   return (
     <div className="products_list">
       <div className="products_filters">
@@ -26,7 +26,7 @@ export const ProductsPage = () => {
           </button>
         </div>
         <ul>
-          {sortFilterData?.map((item) => (
+          {priceFilterData?.map((item) => (
             <li>
               <ShoesCard {...item} />
             </li>
