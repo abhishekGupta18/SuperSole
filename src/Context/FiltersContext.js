@@ -12,6 +12,7 @@ export const FilterContextProvider = ({ children }) => {
     sort: "",
     rating: 1,
     price: 0,
+    search: "",
   };
   const [filterState, filterDispatch] = useReducer(
     filterReducer,
@@ -26,7 +27,7 @@ export const FilterContextProvider = ({ children }) => {
     filterState?.category?.length > 0
       ? shoesData?.filter((item) =>
           filterState?.category.some(
-            (checkCategory) => item?.for === checkCategory
+            (checkCategory) => item?.gender === checkCategory
           )
         )
       : shoesData;
@@ -56,9 +57,22 @@ export const FilterContextProvider = ({ children }) => {
       ? ratingFilterData?.filter((item) => item.price >= filterState?.price)
       : ratingFilterData;
 
+  const searchFilterData =
+    filterState?.search.length > 0
+      ? priceFilterData?.filter(
+          (item) =>
+            item?.name
+              .toLowerCase()
+              .includes(filterState?.search.toLowerCase()) ||
+            item?.brand
+              .toLowerCase()
+              .includes(filterState?.search.toLowerCase())
+        )
+      : priceFilterData;
+
   return (
     <FilterContext.Provider
-      value={{ filterState, filterDispatch, priceFilterData }}
+      value={{ filterState, filterDispatch, searchFilterData }}
     >
       {children}
     </FilterContext.Provider>

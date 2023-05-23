@@ -8,6 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import { ShoesContextProvider } from "./Context/DataContext";
 import { FilterContextProvider } from "./Context/FiltersContext";
+import { AuthContextProvider } from "./Context/AuthContext";
 
 // Call make Server
 makeServer();
@@ -15,11 +16,13 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ShoesContextProvider>
-        <FilterContextProvider>
-          <App />
-        </FilterContextProvider>
-      </ShoesContextProvider>
+      <AuthContextProvider>
+        <ShoesContextProvider>
+          <FilterContextProvider>
+            <App />
+          </FilterContextProvider>
+        </ShoesContextProvider>
+      </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

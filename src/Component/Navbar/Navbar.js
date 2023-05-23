@@ -2,10 +2,14 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
 
+import { useFilterContext } from "../../Context/FiltersContext";
+
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 export const Navbar = () => {
+  const { filterDispatch, filterState } = useFilterContext();
+
   const navigate = useNavigate();
   return (
     <nav className="navigation">
@@ -33,7 +37,17 @@ export const Navbar = () => {
         </div>
       </div>
       <div className="nav_right">
-        <input type="text" placeholder="What are you looking for ?" />
+        <input
+          type="text"
+          placeholder="What are you looking for ?"
+          onChange={(e) =>
+            filterDispatch({
+              type: "filter_by_search",
+              payload: e.target.value,
+            })
+          }
+          onKeyPress={(e) => e.which === 13 && navigate("/products")}
+        />
       </div>
     </nav>
   );

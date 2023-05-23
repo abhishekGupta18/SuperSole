@@ -1,4 +1,6 @@
 import Mockman from "mockman-js";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -18,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <ToastContainer position="bottom-right" autoClose={2000} />
       <Routes>
         <Route path="/mockMan" element={<Mockman />} />
         <Route path="/" element={<LandingPage />} />

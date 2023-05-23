@@ -32,6 +32,12 @@ export const filterReducer = (filterState, action) => {
         ...filterState,
         price: action.payload,
       };
+
+    case "filter_by_search":
+      return {
+        ...filterState,
+        search: action.payload,
+      };
     case "clear_filters":
       return {
         category: [],
@@ -39,6 +45,7 @@ export const filterReducer = (filterState, action) => {
         sort: "",
         rating: 1,
         price: 0,
+        search: "",
       };
   }
 };
