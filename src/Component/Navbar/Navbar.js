@@ -1,13 +1,18 @@
 import { NavLink, useNavigate } from "react-router-dom";
 
+import { useAuthContext } from "../../Context/AuthContext";
+
 import "./Navbar.css";
 
 import { useFilterContext } from "../../Context/FiltersContext";
 
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import PersonIcon from "@mui/icons-material/Person";
 
 export const Navbar = () => {
+  const { authState } = useAuthContext();
+
   const { filterDispatch, filterState } = useFilterContext();
 
   const navigate = useNavigate();
@@ -22,10 +27,17 @@ export const Navbar = () => {
           <NavLink to="/products" className="explore_link">
             Explore
           </NavLink>
-          <NavLink to="/login">
-            {" "}
-            <button className="login_btn">Login</button>
-          </NavLink>
+
+          {authState?.isLoggedIn ? (
+            <NavLink to="/userProfile">
+              <PersonIcon />
+            </NavLink>
+          ) : (
+            <NavLink to="/login">
+              {" "}
+              <button className="login_btn">Login</button>
+            </NavLink>
+          )}
 
           <NavLink to="/wishlist">
             <FavoriteOutlinedIcon></FavoriteOutlinedIcon>

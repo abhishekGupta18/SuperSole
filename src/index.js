@@ -9,6 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ShoesContextProvider } from "./Context/DataContext";
 import { FilterContextProvider } from "./Context/FiltersContext";
 import { AuthContextProvider } from "./Context/AuthContext";
+import { CartContextProvider } from "./Context/CartContext";
 
 // Call make Server
 makeServer();
@@ -18,9 +19,11 @@ ReactDOM.render(
     <BrowserRouter>
       <AuthContextProvider>
         <ShoesContextProvider>
-          <FilterContextProvider>
-            <App />
-          </FilterContextProvider>
+          <CartContextProvider>
+            <FilterContextProvider>
+              <App />
+            </FilterContextProvider>
+          </CartContextProvider>
         </ShoesContextProvider>
       </AuthContextProvider>
     </BrowserRouter>

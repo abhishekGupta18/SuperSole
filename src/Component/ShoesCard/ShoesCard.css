@@ -120,6 +120,30 @@
   background-color: #2563eb;
 }
 
+.go_to_cart {
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ffff;
+  background-color: #3b82f6;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.go_to_cart a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+.go_to_cart:hover {
+  background-color: #2563eb;
+}
+
 @media (max-width: 543px) {
   .shoes_card {
     width: 20rem;

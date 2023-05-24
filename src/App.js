@@ -15,6 +15,7 @@ import { Navbar } from "./Component/Navbar/Navbar";
 import { Footer } from "./Component/Footer/Footer";
 import { LoginPage } from "./Pages/LoginPage/LoginPage";
 import { SignUp } from "./Pages/SignUp/SignUp";
+import { UserProfile } from "./Pages/UserProfile/UserProfile";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/shoeDetails/:shoeId" element={<ProductDetail />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/userProfile" element={<UserProfile />} />
       </Routes>
       <Footer />
     </div>

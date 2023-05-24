@@ -18,29 +18,20 @@ export const LoginPage = () => {
     password: "",
   });
 
-  const checkLogin = () => {
-    if (!loginData?.email.trim() || !loginData?.password.trim()) {
-      toast.warning("fill all the credentials");
-    } else {
-      userLogin(loginData);
-      toast.success("Logged In!");
-    }
-  };
-
-  const checkTestLogin = () => {
-    setLoginData(testUserData);
+  const handleUserLogin = (event) => {
+    event.preventDefault();
     userLogin(loginData);
-    toast.success("Logged In!");
   };
 
   return (
     <div className="login_component">
-      <div className="login_page">
+      <form onSubmit={handleUserLogin} className="login_page">
         <h3 className="login_head">Sign In</h3>
         <label>
           Email address{" "}
           <input
             type="email"
+            required
             placeholder="email"
             value={loginData?.email}
             onChange={(e) =>
@@ -52,6 +43,7 @@ export const LoginPage = () => {
           Password{" "}
           <input
             type="password"
+            required
             placeholder="password"
             value={loginData?.password}
             onChange={(e) =>
@@ -59,16 +51,20 @@ export const LoginPage = () => {
             }
           />
         </label>
-        <button className="login" onClick={() => checkLogin()}>
+        <button type="submit" className="login">
           Login
         </button>
-        <button className="login_as_guest" onClick={() => checkTestLogin()}>
+        <button
+          type="submit"
+          className="login_as_guest"
+          onClick={() => setLoginData(testUserData)}
+        >
           Login as guest
         </button>
         <p>
           Don't have an account? <NavLink to="/signUp">Sign up</NavLink>
         </p>
-      </div>
+      </form>
     </div>
   );
 };

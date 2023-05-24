@@ -13,33 +13,24 @@ export const SignUp = () => {
     name: "",
     email: "",
     password: "",
-    confirmPassword: "",
+    confirmPassword: true,
   });
 
-  const checkSignUp = () => {
-    if (
-      !signUpData?.name.trim() ||
-      !signUpData?.email.trim() ||
-      !signUpData?.password.trim() ||
-      !signUpData?.confirmPassword.trim()
-    ) {
-      toast.warning("fill all the credentials");
-    } else if (signUpData?.password !== signUpData?.confirmPassword) {
-      toast.warning("password don't match");
-    } else {
-      userSignUp(signUpData);
-      toast.success("Signed up!");
-    }
+  const handleUserSignUp = (event) => {
+    event.preventDefault();
+    userSignUp(signUpData);
+    toast.success("Signed up!");
   };
 
   return (
     <div className="signup_component">
-      <div className="signup_page">
+      <form onSubmit={handleUserSignUp} className="signup_page">
         <h3 className="signup_heading">Sign Up</h3>
         <label>
           Name{" "}
           <input
             type="text"
+            required
             placeholder="name"
             value={signUpData?.name}
             onChange={(e) =>
@@ -50,7 +41,8 @@ export const SignUp = () => {
         <label>
           Email address{" "}
           <input
-            type="text"
+            required
+            type="email"
             placeholder="email"
             value={signUpData?.email}
             onChange={(e) =>
@@ -61,6 +53,7 @@ export const SignUp = () => {
         <label>
           Password{" "}
           <input
+            required
             type="password"
             placeholder="password"
             value={signUpData?.password}
@@ -74,19 +67,24 @@ export const SignUp = () => {
           <input
             type="password"
             placeholder="confirm password"
-            value={signUpData?.confirmPassword}
+            required
             onChange={(e) =>
-              setSignUpData({ ...signUpData, confirmPassword: e.target.value })
+              setSignUpData({
+                ...signUpData,
+                confirmPassword:
+                  signUpData.password === e.target.value ? true : false,
+              })
             }
           />
         </label>
-        <button className="signup_btn" onClick={() => checkSignUp()}>
+        {!signUpData.confirmPassword && <p> password doesn't match</p>}
+        <button type="submit" className="signup_btn">
           Create new account
         </button>
         <p>
           Already have an account? <NavLink to="/login">Sign in</NavLink>{" "}
         </p>
-      </div>
+      </form>
     </div>
   );
 };
