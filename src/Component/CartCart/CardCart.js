@@ -2,8 +2,16 @@ import { useCartContext } from "../../Context/CartContext";
 
 import "./CardCart.css";
 
-export const CardCart = ({ _id, image, brand, name, price, originalPrice }) => {
-  const { removeFromCart } = useCartContext();
+export const CardCart = ({
+  _id,
+  image,
+  brand,
+  name,
+  price,
+  originalPrice,
+  qty,
+}) => {
+  const { removeFromCart, changeCartQuantity } = useCartContext();
   return (
     <div className="cart_card">
       <div className="cart_img_container">
@@ -18,9 +26,20 @@ export const CardCart = ({ _id, image, brand, name, price, originalPrice }) => {
         </div>
         <div className="cart_quantity">
           <p style={{ fontSize: "1rem" }}>Quantity:</p>
-          <button className="inc_quantity">+</button>
-          <p className="actual_quantity">10</p>
-          <button className="dec_quantity">-</button>
+          <button
+            className="inc_quantity"
+            onClick={() => changeCartQuantity(_id, "increment")}
+          >
+            +
+          </button>
+          <p className="actual_quantity">{qty}</p>
+          <button
+            className="dec_quantity"
+            disabled={qty === 1}
+            onClick={() => changeCartQuantity(_id, "decrement")}
+          >
+            -
+          </button>
         </div>
         <div className="cart_to_wishlist">
           <button>Add to wishlist</button>

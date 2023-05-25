@@ -68,6 +68,22 @@ export const CartContextProvider = ({ children }) => {
     }
   };
 
+  const changeCartQuantity = async (productId, updateType) => {
+    try {
+      const { status, data } = await axios({
+        method: "post",
+        url: `/api/user/cart/${productId}`,
+        data: { action: { type: updateType } },
+        headers: { authorization: token },
+      });
+      if (status === 200) {
+        cartDispatch({ type: "get_cart", payload: data?.cart });
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -76,6 +92,7 @@ export const CartContextProvider = ({ children }) => {
         addToCart,
         isPresentInCart,
         removeFromCart,
+        changeCartQuantity,
       }}
     >
       {children}
