@@ -1,8 +1,9 @@
-import { v4 as uuid } from "uuid";
+import { useCartContext } from "../../Context/CartContext";
 
 import "./CardCart.css";
 
-export const CardCart = ({ image, brand, name, price, originalPrice }) => {
+export const CardCart = ({ _id, image, brand, name, price, originalPrice }) => {
+  const { removeFromCart } = useCartContext();
   return (
     <div className="cart_card">
       <div className="cart_img_container">
@@ -25,7 +26,7 @@ export const CardCart = ({ image, brand, name, price, originalPrice }) => {
           <button>Add to wishlist</button>
         </div>
         <div className="remove_from_cart">
-          <button>Remove from cart</button>
+          <button onClick={() => removeFromCart(_id)}>Remove from cart</button>
         </div>
       </div>
     </div>

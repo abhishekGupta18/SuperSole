@@ -51,9 +51,32 @@ export const CartContextProvider = ({ children }) => {
     }
   };
 
+  const removeFromCart = async (productId) => {
+    try {
+      const { status, data } = await axios({
+        method: "delete",
+        url: `/api/user/cart/${productId}`,
+        headers: { authorization: token },
+      });
+
+      if (status === 200) {
+        cartDispatch({ type: "get_cart", payload: data?.cart });
+        toast.error("item is removed from cart");
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   return (
     <CartContext.Provider
-      value={{ cartState, cartDispatch, addToCart, isPresentInCart }}
+      value={{
+        cartState,
+        cartDispatch,
+        addToCart,
+        isPresentInCart,
+        removeFromCart,
+      }}
     >
       {children}
     </CartContext.Provider>
