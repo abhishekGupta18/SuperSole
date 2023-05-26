@@ -43,6 +43,22 @@
 .wish_list_btn svg {
   color: #ffff;
 }
+.remove_from_wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  width: 2rem;
+  position: absolute;
+  inset: 0 0 100% 87%;
+  background-color: #0ea5e9;
+  border-bottom-left-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+.remove_from_wishlist svg {
+  color: #dc2626;
+}
 .shoes_detail {
   padding: 0 1rem 1rem 1rem;
   display: flex;

@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 
 import { useCartContext } from "../../Context/CartContext";
 import { useAuthContext } from "../../Context/AuthContext";
+import { useWishListContext } from "../../Context/WishListContext";
 
 import "./ShoesCard.css";
 
@@ -10,6 +11,8 @@ import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 export const ShoesCard = (item) => {
   const { addToCart, isPresentInCart } = useCartContext();
+  const { addToWishList, isPresentInWishList, removeFromWishlist } =
+    useWishListContext();
   const { authState } = useAuthContext();
 
   return (
@@ -23,9 +26,28 @@ export const ShoesCard = (item) => {
           </p>
           <p>| {item?.reviews}</p>
         </div>
-        <button className="wish_list_btn">
-          <FavoriteOutlinedIcon></FavoriteOutlinedIcon>
-        </button>
+
+        {isPresentInWishList(item) === -1 ? (
+          <button
+            className="wish_list_btn"
+            onClick={(e) => {
+              addToWishList(item);
+              e.preventDefault();
+            }}
+          >
+            <FavoriteOutlinedIcon></FavoriteOutlinedIcon>
+          </button>
+        ) : (
+          <button
+            className="remove_from_wishlist"
+            onClick={(e) => {
+              e.preventDefault();
+              removeFromWishlist(item?._id);
+            }}
+          >
+            <FavoriteOutlinedIcon></FavoriteOutlinedIcon>
+          </button>
+        )}
       </div>
       <div className="shoes_detail">
         <p className="barnd_name">{item?.brand}</p>
