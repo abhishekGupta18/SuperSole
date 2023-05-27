@@ -13,7 +13,7 @@ export const AuthContextProvider = ({ children }) => {
   const [authState, authDispatch] = useReducer(authReducer, {
     isLoggedIn: false,
     userInfo: {},
-    token: "",
+    token: null,
   });
 
   const userSignUp = async (signUpData) => {
@@ -66,7 +66,13 @@ export const AuthContextProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ userSignUp, userLogin, authState, authReducer, userLogout }}
+      value={{
+        userSignUp,
+        userLogin,
+        authState,
+        authReducer,
+        userLogout,
+      }}
     >
       {children}
     </AuthContext.Provider>

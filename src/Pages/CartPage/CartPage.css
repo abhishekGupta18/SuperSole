@@ -1,11 +1,73 @@
 .cart_page {
   display: flex;
   justify-content: center;
-  padding: 3rem;
+  gap: 2rem;
+  padding: 4rem 1rem;
 }
 .cart_items_list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   list-style: none;
+}
+
+.total_price_details {
+  width: 24rem;
+  max-height: 19rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  gap: 1.2rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.total_price_heading {
+  text-align: center;
+  font-family: "Rokkitt", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.total_price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.discounted_price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.final_total_price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.checkout_btn {
+  width: 100%;
+  align-self: center;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: #0ea5e9;
+  border: none;
+  color: #ffff;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 830px) {
+  .cart_page {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .total_price_details {
+    width: 20rem;
+  }
 }

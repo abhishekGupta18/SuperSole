@@ -1,20 +1,23 @@
 import { NavLink, useNavigate } from "react-router-dom";
 
-import { useAuthContext } from "../../Context/AuthContext";
-
 import "./Navbar.css";
 
+import { useAuthContext } from "../../Context/AuthContext";
 import { useFilterContext } from "../../Context/FiltersContext";
+import { useCartContext } from "../../Context/CartContext";
+import { useWishListContext } from "../../Context/WishListContext";
 
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from "@mui/icons-material/Person";
 
 export const Navbar = () => {
+  const { wishListState } = useWishListContext();
+  const { cartState } = useCartContext();
   const { authState } = useAuthContext();
 
   const { filterDispatch, filterState } = useFilterContext();
-
+  console.log(authState.token);
   const navigate = useNavigate();
   return (
     <nav className="navigation">
@@ -28,8 +31,8 @@ export const Navbar = () => {
             Explore
           </NavLink>
 
-          {authState?.isLoggedIn ? (
-            <NavLink to="/userProfile">
+          {authState?.token ? (
+            <NavLink to="/userProfile" className="user_profile_icon">
               <PersonIcon />
             </NavLink>
           ) : (
@@ -39,12 +42,14 @@ export const Navbar = () => {
             </NavLink>
           )}
 
-          <NavLink to="/wishlist">
-            <FavoriteOutlinedIcon></FavoriteOutlinedIcon>
+          <NavLink to="/wishlist" className="show_total_wishItem">
+            <FavoriteOutlinedIcon />
+            <p>{wishListState?.length}</p>
           </NavLink>
 
-          <NavLink to="/cart">
-            <ShoppingCartIcon></ShoppingCartIcon>
+          <NavLink to="/cart" className="show_total_cartItem">
+            <ShoppingCartIcon />
+            <p>{cartState?.length}</p>
           </NavLink>
         </div>
       </div>

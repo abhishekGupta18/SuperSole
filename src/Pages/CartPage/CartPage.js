@@ -3,7 +3,7 @@ import { CardCart } from "../../Component/CartCart/CardCart";
 
 import { useCartContext } from "../../Context/CartContext";
 export const CartPage = () => {
-  const { cartState } = useCartContext();
+  const { cartState, totalCartPrice, discount, totalAmount } = useCartContext();
   console.log(cartState);
   return (
     <div className="cart_page">
@@ -14,6 +14,28 @@ export const CartPage = () => {
           </li>
         ))}
       </ul>
+
+      {cartState?.length > 0 && (
+        <div className="total_price_details">
+          <h3 className="total_price_heading">Price Details</h3>
+          <hr />
+          <div className="total_price">
+            <p>Total price ({cartState?.length} item)</p>
+            <p>₹ {totalCartPrice}</p>
+          </div>
+          <div className="discounted_price">
+            <p>Discount (40% off)</p>
+            <p>₹ - {discount}</p>
+          </div>
+          <hr />
+          <div className="final_total_price">
+            <p>Total Amount</p>
+            <p>₹ {totalAmount}</p>
+          </div>
+          <hr />
+          <button className="checkout_btn">CHECKOUT</button>
+        </div>
+      )}
     </div>
   );
 };

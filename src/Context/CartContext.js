@@ -84,6 +84,15 @@ export const CartContextProvider = ({ children }) => {
     }
   };
 
+  const totalCartPrice = cartState?.reduce(
+    (acc, crr) => (acc += crr.qty * crr.price),
+    0
+  );
+
+  const discount = Math.trunc((40 / 100) * totalCartPrice);
+
+  const totalAmount = totalCartPrice - discount;
+
   return (
     <CartContext.Provider
       value={{
@@ -93,6 +102,9 @@ export const CartContextProvider = ({ children }) => {
         isPresentInCart,
         removeFromCart,
         changeCartQuantity,
+        totalCartPrice,
+        discount,
+        totalAmount,
       }}
     >
       {children}
