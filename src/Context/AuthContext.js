@@ -60,7 +60,7 @@ export const AuthContextProvider = ({ children }) => {
   const userLogout = () => {
     authDispatch({ type: "user_login", payload: false });
     authDispatch({ type: "user_info", payload: {} });
-    authDispatch({ type: "user_token", payload: "" });
+    authDispatch({ type: "user_token", payload: null });
     localStorage.setItem("userToken", "");
   };
 

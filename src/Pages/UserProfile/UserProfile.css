@@ -1,0 +1,89 @@
+.profile_page {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.my_account {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.my_account h2 {
+  text-align: center;
+  font-family: "Rokkitt", Georgia, serif;
+}
+.user_profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.user_profile p {
+  font-size: 1rem;
+}
+
+.profile_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile_heading h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.profile_heading button {
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #38bdf8;
+}
+.profile_heading button:hover {
+  color: #ffff;
+  background-color: #dc2626;
+  cursor: pointer;
+}
+.logout_btn {
+  margin: 0 auto;
+  width: 30%;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #38bdf8;
+}
+.logout_btn:hover {
+  color: #ffff;
+  background-color: #dc2626;
+  cursor: pointer;
+}
+
+@media (max-width: 530px) {
+  .profile_page {
+    padding: 3rem 2rem;
+  }
+  .my_account {
+    width: 25rem;
+  }
+}
+@media (max-width: 450px) {
+  .profile_heading {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .user_profile {
+    align-items: center;
+    gap: 1.5rem;
+  }
+}

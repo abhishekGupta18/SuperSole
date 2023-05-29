@@ -2,8 +2,16 @@ import { toast } from "react-toastify";
 import { useAuthContext } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
+import "./UserProfile.css";
+
 export const UserProfile = () => {
-  const { userLogout } = useAuthContext();
+  const {
+    userLogout,
+    authState: {
+      userInfo: { name, email },
+    },
+  } = useAuthContext();
+
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -13,9 +21,28 @@ export const UserProfile = () => {
   };
 
   return (
-    <>
-      <h1>Welcome user</h1>
-      <button onClick={() => handleLogout()}>Logout</button>
-    </>
+    <div className="profile_page">
+      <div className="my_account">
+        <h2>My Account</h2>
+        <div className="user_profile">
+          <div className="profile_heading">
+            <h3>User Profile</h3>
+            <button>Manage Addresses</button>
+          </div>
+          <p>
+            <strong>Name: </strong>
+            {name}
+          </p>
+          <p>
+            {" "}
+            <strong>Email: </strong>
+            {email}
+          </p>
+          <button className="logout_btn" onClick={() => handleLogout()}>
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };

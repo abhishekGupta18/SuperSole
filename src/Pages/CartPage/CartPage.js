@@ -4,7 +4,6 @@ import { CardCart } from "../../Component/CartCart/CardCart";
 import { useCartContext } from "../../Context/CartContext";
 export const CartPage = () => {
   const { cartState, totalCartPrice, discount, totalAmount } = useCartContext();
-  console.log(cartState);
   return (
     <div className="cart_page">
       <ul className="cart_items_list">

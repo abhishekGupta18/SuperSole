@@ -17,7 +17,7 @@ export const Navbar = () => {
   const { authState } = useAuthContext();
 
   const { filterDispatch, filterState } = useFilterContext();
-  console.log(authState.token);
+
   const navigate = useNavigate();
   return (
     <nav className="navigation">
