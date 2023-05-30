@@ -14,5 +14,17 @@ export const users = [
     password: "adarshbalika",
     createdAt: formatDate(),
     updatedAt: formatDate(),
+    address: [
+      {
+        _id: uuid(),
+        name: "Adarsh Balika",
+        street: "6, Vijay Nagar",
+        city: "Indore",
+        state: "Madhya Pradesh",
+        zipcode: "452061",
+        country: "India",
+        mobile: "9936702189",
+      },
+    ],
   },
 ];
