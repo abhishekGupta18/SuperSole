@@ -38,6 +38,25 @@
   color: #ffff;
   font-size: 2rem;
 }
+
+.remove_wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 1.5rem;
+  width: 2rem;
+  position: absolute;
+  inset: 0 0 100% 0;
+  background-color: #0ea5e9;
+  /* border-bottom-right-radius: 0.5rem; */
+  border: none;
+  cursor: pointer;
+}
+
+.remove_wishlist svg {
+  color: #dc2626;
+  font-size: 2rem;
+}
 .star_rating {
   display: flex;
   align-items: center;

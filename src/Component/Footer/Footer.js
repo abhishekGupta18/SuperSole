@@ -52,7 +52,7 @@ export const Footer = () => {
         }}
       >
         Copyright ©2023 All rights reserved | This template is made by{" "}
-        <span style={{ color: "#2563eb" }}>Abhishek Gupta❤️</span>
+        <span style={{ color: "#2563eb" }}> Abhishek Gupta❤️</span>
       </p>
     </div>
   );
