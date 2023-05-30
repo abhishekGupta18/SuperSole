@@ -2,12 +2,13 @@ import axios from "axios";
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { toast } from "react-toastify";
 
+import { useAuthContext } from "./AuthContext";
 import { cartReducer } from "../Reducer/CartReducer";
 
 export const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
-  const token = localStorage.getItem("userToken");
+  const { authState } = useAuthContext();
 
   const [cartState, cartDispatch] = useReducer(cartReducer, []);
 
@@ -16,7 +17,7 @@ export const CartContextProvider = ({ children }) => {
       const { status, data } = await axios({
         method: "get",
         url: "/api/user/cart",
-        headers: { authorization: token },
+        headers: { authorization: authState?.token },
       });
 
       if (status === 200) {
@@ -38,7 +39,7 @@ export const CartContextProvider = ({ children }) => {
       const { status, data } = await axios({
         method: "post",
         url: "/api/user/cart",
-        headers: { authorization: token },
+        headers: { authorization: authState?.token },
         data: { product: cartItem },
       });
 
@@ -56,7 +57,7 @@ export const CartContextProvider = ({ children }) => {
       const { status, data } = await axios({
         method: "delete",
         url: `/api/user/cart/${productId}`,
-        headers: { authorization: token },
+        headers: { authorization: authState?.token },
       });
 
       if (status === 200) {
@@ -74,7 +75,7 @@ export const CartContextProvider = ({ children }) => {
         method: "post",
         url: `/api/user/cart/${productId}`,
         data: { action: { type: updateType } },
-        headers: { authorization: token },
+        headers: { authorization: authState?.token },
       });
       if (status === 200) {
         cartDispatch({ type: "get_cart", payload: data?.cart });

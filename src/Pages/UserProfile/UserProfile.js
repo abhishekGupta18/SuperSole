@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import { toast } from "react-toastify";
 import { useAuthContext } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -27,7 +29,11 @@ export const UserProfile = () => {
         <div className="user_profile">
           <div className="profile_heading">
             <h3>User Profile</h3>
-            <button>Manage Addresses</button>
+
+            <NavLink to="/userAddress">
+              {" "}
+              <button>Manage Address</button>{" "}
+            </NavLink>
           </div>
           <p>
             <strong>Name: </strong>

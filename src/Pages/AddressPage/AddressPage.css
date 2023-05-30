@@ -1,0 +1,76 @@
+.address_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  gap: 2rem;
+}
+.address_page_heading {
+  text-align: center;
+  font-family: "Rokkitt", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.address_details {
+  border-radius: 0.5rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.add_address_btn {
+  width: 55%;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #2563eb;
+  color: #ffff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.address_btn {
+  display: flex;
+  gap: 1.5rem;
+}
+.edit_address_btn {
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  color: #0ea5e9;
+  border: 1px solid #0ea5e9;
+}
+.edit_address_btn:hover {
+  color: #ffff;
+  background-color: #0ea5e9;
+  cursor: pointer;
+}
+
+.dlt_address_btn {
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+}
+.dlt_address_btn:hover {
+  color: #ffff;
+  background-color: #dc2626;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .address_page {
+    padding: 3rem 3rem;
+  }
+  .address_details {
+    width: 20rem;
+  }
+}
