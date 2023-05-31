@@ -1,5 +1,9 @@
 import "./LandingPage.css";
 
+import { useNavigate } from "react-router-dom";
+
+import { useFilterContext } from "../../Context/FiltersContext";
+
 import shoesPoster from "../../Asset/poster1.png";
 import shoesPoster2 from "../../Asset/poster3.png";
 import adidas from "../../Asset/Adidas.png";
@@ -16,6 +20,9 @@ import femaleShoes from "../../Asset/female-shoes.jpg";
 import kidShoes from "../../Asset/kids-shoes.jpg";
 
 export const LandingPage = () => {
+  const { filterDispatch, filterState } = useFilterContext();
+  const navigate = useNavigate();
+
   return (
     <div className="landing_page">
       <div className="not_nav">
@@ -37,15 +44,42 @@ export const LandingPage = () => {
         <div className="shop_by_category">
           <div className="male_shoes">
             <img className="category_img" src={maleShoes} alt="" />
-            <button className="category_btn">Shop For Men</button>
+            <button
+              className="category_btn"
+              onClick={() => {
+                filterDispatch({ type: "filter_by_category", payload: "Men" });
+                navigate("/products");
+              }}
+            >
+              Shop For Men
+            </button>
           </div>
           <div className="female_shoes">
             <img className="category_img" src={femaleShoes} alt="" />
-            <button className="category_btn">Shop For Female</button>
+            <button
+              className="category_btn"
+              onClick={() => {
+                filterDispatch({
+                  type: "filter_by_category",
+                  payload: "Women",
+                });
+                navigate("/products");
+              }}
+            >
+              Shop For Female
+            </button>
           </div>
           <div className="kid_shoes">
             <img className="category_img" src={kidShoes} alt="" />
-            <button className="category_btn">Shop For Kid</button>
+            <button
+              className="category_btn"
+              onClick={() => {
+                filterDispatch({ type: "filter_by_category", payload: "Kids" });
+                navigate("/products");
+              }}
+            >
+              Shop For Kid
+            </button>
           </div>
         </div>
         <img src={shoesPoster} alt="" />

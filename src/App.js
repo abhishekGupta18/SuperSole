@@ -17,6 +17,7 @@ import { LoginPage } from "./Pages/LoginPage/LoginPage";
 import { SignUp } from "./Pages/SignUp/SignUp";
 import { UserProfile } from "./Pages/UserProfile/UserProfile";
 import { AddressPage } from "./Pages/AddressPage/AddressPage";
+import { AddressModal } from "./Component/AddressModal/AddressModal";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/userProfile" element={<UserProfile />} />
         <Route path="/userAddress" element={<AddressPage />} />
+        <Route path="/addNewAddress" element={<AddressModal />} />
       </Routes>
       <Footer />
     </div>
