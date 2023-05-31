@@ -66,6 +66,17 @@
   cursor: pointer;
 }
 
+.address_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+}
+.address_list li {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 @media (max-width: 450px) {
   .address_page {
     padding: 3rem 3rem;

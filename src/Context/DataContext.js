@@ -42,7 +42,6 @@ export const ShoesContextProvider = ({ children }) => {
     }
   };
 
-  console.log(state?.shoesCategory);
   useEffect(() => {
     getData();
     getCategory();
