@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import "./CartPage.css";
 import { CardCart } from "../../Component/CartCart/CardCart";
 
 import { useCartContext } from "../../Context/CartContext";
+
 export const CartPage = () => {
+  const navigate = useNavigate();
   const { cartState, totalCartPrice, discount, totalAmount } = useCartContext();
   return (
     <div className="cart_page">
@@ -32,7 +35,12 @@ export const CartPage = () => {
             <p>₹ {totalAmount}</p>
           </div>
           <hr />
-          <button className="checkout_btn">CHECKOUT</button>
+          <button
+            className="checkout_btn"
+            onClick={() => navigate("/checkout")}
+          >
+            CHECKOUT
+          </button>
         </div>
       )}
     </div>

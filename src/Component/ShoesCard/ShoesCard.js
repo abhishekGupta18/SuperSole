@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useCartContext } from "../../Context/CartContext";
 import { useAuthContext } from "../../Context/AuthContext";
@@ -14,6 +15,7 @@ export const ShoesCard = (item) => {
   const { addToWishList, isPresentInWishList, removeFromWishlist } =
     useWishListContext();
   const { authState } = useAuthContext();
+  const navigate = useNavigate();
 
   return (
     <NavLink className="shoes_card" to={`/shoeDetails/${item?._id}`}>
@@ -31,8 +33,8 @@ export const ShoesCard = (item) => {
           <button
             className="wish_list_btn"
             onClick={(e) => {
-              addToWishList(item);
               e.preventDefault();
+              authState?.token ? addToWishList(item) : navigate("/login");
             }}
           >
             <FavoriteOutlinedIcon></FavoriteOutlinedIcon>
@@ -67,7 +69,7 @@ export const ShoesCard = (item) => {
             className="add_cart_btn"
             onClick={(e) => {
               e.preventDefault();
-              addToCart(item);
+              authState?.token ? addToCart(item) : navigate("/login");
             }}
           >
             <ShoppingCartIcon />

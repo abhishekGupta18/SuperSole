@@ -18,6 +18,8 @@ import { SignUp } from "./Pages/SignUp/SignUp";
 import { UserProfile } from "./Pages/UserProfile/UserProfile";
 import { AddressPage } from "./Pages/AddressPage/AddressPage";
 import { AddressModal } from "./Component/AddressModal/AddressModal";
+import { CheckoutPage } from "./Pages/CheckoutPage/Checkout";
+import { ReqRouting } from "./Routing/Routing";
 
 function App() {
   return (
@@ -28,14 +30,58 @@ function App() {
         <Route path="/mockMan" element={<Mockman />} />
         <Route path="/" element={<LandingPage />} />
         <Route path="/products" element={<ProductsPage />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/wishlist" element={<WishlistPage />} />
+
+        <Route
+          path="/cart"
+          element={
+            <ReqRouting>
+              <CartPage />
+            </ReqRouting>
+          }
+        />
+        <Route
+          path="/wishlist"
+          element={
+            <ReqRouting>
+              <WishlistPage />
+            </ReqRouting>
+          }
+        />
         <Route path="/shoeDetails/:shoeId" element={<ProductDetail />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signUp" element={<SignUp />} />
-        <Route path="/userProfile" element={<UserProfile />} />
-        <Route path="/userAddress" element={<AddressPage />} />
-        <Route path="/addNewAddress" element={<AddressModal />} />
+        <Route
+          path="/userProfile"
+          element={
+            <ReqRouting>
+              <UserProfile />
+            </ReqRouting>
+          }
+        />
+        <Route
+          path="/userAddress"
+          element={
+            <ReqRouting>
+              <AddressPage />
+            </ReqRouting>
+          }
+        />
+        <Route
+          path="/addNewAddress"
+          element={
+            <ReqRouting>
+              <AddressModal />
+            </ReqRouting>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <ReqRouting>
+              <CheckoutPage />
+            </ReqRouting>
+          }
+        />
       </Routes>
       <Footer />
     </div>

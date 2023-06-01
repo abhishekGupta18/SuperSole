@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 import { createContext, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import { authReducer } from "../Reducer/AuthReducer";
@@ -9,6 +10,7 @@ import axios from "axios";
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
+  const location = useLocation();
   const navigate = useNavigate();
   const [authState, authDispatch] = useReducer(authReducer, {
     isLoggedIn: false,
@@ -48,7 +50,7 @@ export const AuthContextProvider = ({ children }) => {
         authDispatch({ type: "user_info", payload: data.foundUser });
         authDispatch({ type: "user_token", payload: data.encodedToken });
         localStorage.setItem("userToken", data.encodedToken);
-        navigate("/");
+        navigate(location?.state?.from?.pathname || "/", { replace: true });
         toast.success("logged in!");
       }
     } catch (e) {

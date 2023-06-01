@@ -20,7 +20,7 @@ export const AddressPage = () => {
             setAddressInitialState(resetAddress);
           }}
         >
-          + Add Address{" "}
+          + Add New Address{" "}
         </button>
 
         <ul className="address_list">

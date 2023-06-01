@@ -1,0 +1,132 @@
+.checkout_page {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.checkout_heading {
+  text-align: center;
+  font-family: "Rokkitt", Georgia, serif;
+}
+.checkout_page_content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.checkout_address_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.checkout_select_address ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+.checkout_actual_address {
+  width: 22rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.checkout_actual_address label {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+}
+.checkout_address_details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.order_summary {
+  width: 25rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.5rem;
+}
+
+.product_Quantity {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 550;
+  font-size: 1rem;
+}
+.order_summary ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.product_summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.price_summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.price_summary div {
+  display: flex;
+  justify-content: space-between;
+}
+.delivery_details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.delivery_address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.place_order_btn {
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: none;
+  color: #ffff;
+  background-color: #3b82f6;
+}
+.place_order_btn:hover {
+  background-color: #2563eb;
+}
+
+@media (max-width: 850px) {
+  .checkout_page_content {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  .checkout_select_address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkout_select_address ul {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 550px) {
+  .checkout_actual_address {
+    width: 18rem;
+  }
+  .order_summary {
+    width: 20rem;
+  }
+}
