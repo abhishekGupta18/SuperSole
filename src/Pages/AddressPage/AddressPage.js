@@ -2,18 +2,23 @@ import { useNavigate } from "react-router-dom";
 import "./AddressPage.css";
 
 import { useAddressContext } from "../../Context/AddressContext";
+import { AddressModal } from "../../Component/AddressModal/AddressModal";
 
 export const AddressPage = () => {
-  const { addressState, deleteAddress } = useAddressContext();
-
+  const { addressState, deleteAddress, setAddressInitialState, resetAddress } =
+    useAddressContext();
   const navigate = useNavigate();
+
   return (
     <div className="address_page">
       <h2 className="address_page_heading">User Address</h2>
       <div className="address_details">
         <button
           className="add_address_btn"
-          onClick={() => navigate("/addNewAddress")}
+          onClick={() => {
+            navigate("/addNewAddress");
+            setAddressInitialState(resetAddress);
+          }}
         >
           + Add Address{" "}
         </button>
@@ -31,7 +36,15 @@ export const AddressPage = () => {
               </p>
               <p>{address.mobile}</p>
               <div className="address_btn">
-                <button className="edit_address_btn">Edit</button>
+                <button
+                  className="edit_address_btn"
+                  onClick={() => {
+                    navigate("/addNewAddress");
+                    setAddressInitialState(address);
+                  }}
+                >
+                  Edit
+                </button>
                 <button
                   className="dlt_address_btn"
                   onClick={() => deleteAddress(address._id)}

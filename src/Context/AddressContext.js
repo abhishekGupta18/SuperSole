@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-import { useReducer } from "react";
-import { useContext } from "react";
-import { createContext } from "react";
+import { useReducer, useState, useContext, createContext } from "react";
+
 import { addressReducer } from "../Reducer/AddressReducer";
 import { useAuthContext } from "./AuthContext";
 
@@ -14,6 +13,17 @@ import { useEffect } from "react";
 export const AddressContext = createContext();
 
 export const AddressContextProvider = ({ children }) => {
+  const resetAddress = {
+    name: "",
+    street: "",
+    city: "",
+    zipcode: "",
+    state: "",
+    country: "",
+    mobile: "",
+  };
+  const [addressInitialState, setAddressInitialState] = useState(resetAddress);
+
   const navigate = useNavigate();
   const { authState } = useAuthContext();
 
@@ -74,10 +84,35 @@ export const AddressContextProvider = ({ children }) => {
       console.error(e);
     }
   };
+
+  const editAddresss = async (addressInput, addressId) => {
+    try {
+      const { status, data } = await axios({
+        method: "post",
+        url: `/api/user/address/${addressId}`,
+        headers: { authorization: authState?.token },
+        data: { address: addressInput },
+      });
+      if (status === 201) {
+        addressDispatch({ type: "get_user_address", payload: data?.address });
+        navigate("/userAddress");
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
   console.log(addressState);
   return (
     <AddressContext.Provider
-      value={{ addAddress, addressState, deleteAddress }}
+      value={{
+        addAddress,
+        addressState,
+        deleteAddress,
+        editAddresss,
+        addressInitialState,
+        setAddressInitialState,
+        resetAddress,
+      }}
     >
       {children}
     </AddressContext.Provider>

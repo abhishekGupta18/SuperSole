@@ -4,25 +4,43 @@ import { useNavigate } from "react-router-dom";
 
 import { useAddressContext } from "../../Context/AddressContext";
 import { useState } from "react";
+import { toast } from "react-toastify";
+const dummyAddress = {
+  name: "Aditi Shah",
+  street: "7, G.N. Road",
+  city: "Mumbai",
+  zipcode: "986435",
+  state: "Maharashtra",
+  country: "India",
+  mobile: "9568751239",
+};
 
 export const AddressModal = () => {
   const navigate = useNavigate();
-  const { addAddress } = useAddressContext();
-  const [addressInitialState, setAddressInitialState] = useState({
-    name: "",
-    street: "",
-    city: "",
-    zipcode: "",
-    state: "",
-    country: "",
-    mobile: "",
-  });
+  const {
+    addAddress,
+    addressInitialState,
+    setAddressInitialState,
+    resetAddress,
+    editAddresss,
+    addressState,
+  } = useAddressContext();
 
   const addressHandler = (event) => {
     event.preventDefault();
-    console.log(addressInitialState);
-    addAddress({ ...addressInitialState, _id: uuid() });
+
+    const findAddress = addressState?.find(
+      (address) => address._id === addressInitialState._id
+    );
+
+    if (findAddress) {
+      editAddresss(addressInitialState, findAddress._id);
+      toast.success("Edit address successfully!");
+    } else {
+      addAddress({ ...addressInitialState, _id: uuid() });
+    }
   };
+  console.log(addressInitialState);
   return (
     <div className="add_address_form">
       <h2 className="add_address_heading">Add New Address</h2>
@@ -31,6 +49,7 @@ export const AddressModal = () => {
           required
           type="text"
           placeholder="Name"
+          value={addressInitialState.name}
           onChange={(e) =>
             setAddressInitialState({
               ...addressInitialState,
@@ -42,6 +61,7 @@ export const AddressModal = () => {
           required
           type="text"
           placeholder="Street"
+          value={addressInitialState.street}
           onChange={(e) =>
             setAddressInitialState({
               ...addressInitialState,
@@ -53,6 +73,7 @@ export const AddressModal = () => {
           required
           type="text"
           placeholder="City"
+          value={addressInitialState.city}
           onChange={(e) =>
             setAddressInitialState({
               ...addressInitialState,
@@ -64,6 +85,7 @@ export const AddressModal = () => {
           required
           type="text"
           placeholder="Zipcode"
+          value={addressInitialState.zipcode}
           onChange={(e) =>
             setAddressInitialState({
               ...addressInitialState,
@@ -75,6 +97,7 @@ export const AddressModal = () => {
           required
           type="text"
           placeholder="State"
+          value={addressInitialState.state}
           onChange={(e) =>
             setAddressInitialState({
               ...addressInitialState,
@@ -86,6 +109,7 @@ export const AddressModal = () => {
           required
           type="text"
           placeholder="Country"
+          value={addressInitialState.country}
           onChange={(e) =>
             setAddressInitialState({
               ...addressInitialState,
@@ -97,6 +121,7 @@ export const AddressModal = () => {
           required
           type="text"
           placeholder="Mobile Number"
+          value={addressInitialState.mobile}
           onChange={(e) =>
             setAddressInitialState({
               ...addressInitialState,
@@ -116,8 +141,20 @@ export const AddressModal = () => {
           </button>
         </div>
         <div className="dummyInputs_reset_btn">
-          <button className="dummyInputs_btn">Dummy Inputs</button>
-          <button className="reset_btn">Reset</button>
+          <button
+            type="button"
+            className="dummyInputs_btn"
+            onClick={() => setAddressInitialState(dummyAddress)}
+          >
+            Dummy Inputs
+          </button>
+          <button
+            type="button"
+            className="reset_btn"
+            onClick={() => setAddressInitialState(resetAddress)}
+          >
+            Reset
+          </button>
         </div>
       </form>
     </div>
