@@ -36,7 +36,14 @@
 .price_filter h3 {
   font-weight: 500;
 }
-
+.low_to_high {
+  display: flex;
+  justify-content: space-between;
+}
+.low_to_high p {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
 .category_filter {
   display: flex;
   flex-direction: column;

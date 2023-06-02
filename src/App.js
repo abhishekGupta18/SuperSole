@@ -20,7 +20,7 @@ import { AddressPage } from "./Pages/AddressPage/AddressPage";
 import { AddressModal } from "./Component/AddressModal/AddressModal";
 import { CheckoutPage } from "./Pages/CheckoutPage/Checkout";
 import { ReqRouting } from "./Routing/Routing";
-
+import { PageNotFound } from "./Pages/PageNotFound/PageNotFound";
 function App() {
   return (
     <div className="App">
@@ -82,7 +82,9 @@ function App() {
             </ReqRouting>
           }
         />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
+
       <Footer />
     </div>
   );

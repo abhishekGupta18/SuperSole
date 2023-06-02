@@ -1,0 +1,34 @@
+.page_not_found {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.page_not_found img {
+  width: 50%;
+}
+.page_not_found button {
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid #0ea5e9;
+  color: #0ea5e9;
+}
+.page_not_found button:hover {
+  color: #ffff;
+  background-color: #0ea5e9;
+}
+
+@media (max-width: 768px) {
+  .page_not_found img {
+    width: 60%;
+  }
+}
+@media (max-width: 550px) {
+  .page_not_found img {
+    width: 70%;
+  }
+}

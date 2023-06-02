@@ -5,11 +5,15 @@ import { CardCart } from "../../Component/CartCart/CardCart";
 import { useCartContext } from "../../Context/CartContext";
 
 import emptyCart from "../../Asset/empty_cart.png";
+import ShoesGif from "../../Asset/shoes gif.gif";
 
 export const CartPage = () => {
   const navigate = useNavigate();
-  const { cartState, totalCartPrice, discount, totalAmount } = useCartContext();
-  return (
+  const { cartState, totalCartPrice, discount, totalAmount, cartLoading } =
+    useCartContext();
+  return cartLoading ? (
+    <img src={ShoesGif} alt="gif" className="shoes_loader" />
+  ) : (
     <div className="cart_page">
       <ul className="cart_items_list">
         {cartState?.length === 0 ? (

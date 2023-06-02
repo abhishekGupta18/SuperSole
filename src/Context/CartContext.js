@@ -1,5 +1,11 @@
 import axios from "axios";
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
 import { toast } from "react-toastify";
 
 import { useAuthContext } from "./AuthContext";
@@ -11,8 +17,10 @@ export const CartContextProvider = ({ children }) => {
   const { authState } = useAuthContext();
 
   const [cartState, cartDispatch] = useReducer(cartReducer, []);
+  const [cartLoading, setCartLoading] = useState(false);
 
   const getCart = async () => {
+    setCartLoading(true);
     try {
       const { status, data } = await axios({
         method: "get",
@@ -25,6 +33,8 @@ export const CartContextProvider = ({ children }) => {
       }
     } catch (e) {
       console.error(e);
+    } finally {
+      setCartLoading(false);
     }
   };
   useEffect(() => {
@@ -106,6 +116,7 @@ export const CartContextProvider = ({ children }) => {
         totalCartPrice,
         discount,
         totalAmount,
+        cartLoading,
       }}
     >
       {children}

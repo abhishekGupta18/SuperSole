@@ -203,7 +203,7 @@ export const products = [
     category: "Sports shoes",
     price: "4999",
     originalPrice: "7000",
-    rating: "4.8",
+    rating: "5",
     gender: "Men",
     inStock: true,
     reviews: "1.02k",

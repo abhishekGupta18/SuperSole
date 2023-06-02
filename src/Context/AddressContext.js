@@ -25,6 +25,7 @@ export const AddressContextProvider = ({ children }) => {
   const [addressInitialState, setAddressInitialState] = useState(resetAddress);
 
   const navigate = useNavigate();
+
   const { authState } = useAuthContext();
 
   const [addressState, addressDispatch] = useReducer(addressReducer, []);

@@ -32,11 +32,15 @@ export const Filters = () => {
         <input
           type="range"
           min="0"
-          max="8000"
+          max="7999"
           onClick={(e) =>
             filterDispatch({ type: "filter_by_price", payload: e.target.value })
           }
         />
+        <div className="low_to_high">
+          <p>₹ 0</p>
+          <p>₹ 7999</p>
+        </div>
       </div>
       <hr />
       <div className="category_filter">

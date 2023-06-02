@@ -30,6 +30,7 @@
 .cancel_add_btn {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .address_add_btn {
@@ -40,6 +41,7 @@
   border: none;
   color: #ffff;
   background-color: #3b82f6;
+  cursor: pointer;
 }
 
 .address_add_btn:hover {
@@ -53,6 +55,7 @@
   border-radius: 0.5rem;
   color: #dc2626;
   border: 1px solid #dc2626;
+  cursor: pointer;
 }
 .address_dlt_btn:hover {
   color: #fff;
@@ -69,6 +72,7 @@
   border-radius: 0.5rem;
   color: #0ea5e9;
   border: 1px solid #0ea5e9;
+  cursor: pointer;
 }
 .dummyInputs_btn:hover {
   color: #fff;
@@ -82,6 +86,7 @@
   border-radius: 0.5rem;
   color: #0ea5e9;
   border: 1px solid #0ea5e9;
+  cursor: pointer;
 }
 .reset_btn:hover {
   color: #fff;
