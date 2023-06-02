@@ -1,18 +1,65 @@
 import "./Checkout.css";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import { useAddressContext } from "../../Context/AddressContext";
 import { useCartContext } from "../../Context/CartContext";
 import { useState } from "react";
+
+const loadScript = (url) => {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = url;
+
+    script.onload = () => {
+      resolve(true);
+    };
+
+    script.onerror = () => {
+      resolve(false);
+    };
+
+    document.body.appendChild(script);
+  });
+};
+
 export const CheckoutPage = () => {
   const [currentAddress, setCurrentAddress] = useState({});
   const { addressState, setAddressInitialState, resetAddress } =
     useAddressContext();
-  const { cartState, totalCartPrice, discount, totalAmount } = useCartContext();
+  const { cartState, totalCartPrice, discount, totalAmount, removeFromCart } =
+    useCartContext();
 
   const navigate = useNavigate();
-  console.log(currentAddress);
 
+  const displayRazorpay = async () => {
+    const response = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
+    if (!response) {
+      alert("Razorpay SDK failed to load, check you internet connection");
+      return;
+    }
+    const options = {
+      key: "rzp_test_rRBXl8qxWCNl8d",
+      amount: Number(totalAmount) * 100,
+      currency: "INR",
+      name: "Super Sole",
+      description: "Thank you for shopping with us",
+      handler: function () {
+        toast.success(`Payment of Rs. ${totalAmount} is Succesful`);
+        navigate("/");
+        cartState.map((item) => removeFromCart(item._id));
+      },
+      theme: {
+        color: "#2563eb",
+      },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  };
+  console.log(currentAddress);
   return (
     <div className="checkout_page">
       <h2 className="checkout_heading">Checkout</h2>
@@ -105,7 +152,16 @@ export const CheckoutPage = () => {
             </div>
           </div>
           <hr />
-          <button className="place_order_btn">Place Order</button>
+          <button
+            className="place_order_btn"
+            onClick={() => {
+              Object.keys(currentAddress).length === 0
+                ? toast.error("select an address first")
+                : displayRazorpay();
+            }}
+          >
+            Place Order
+          </button>
         </div>
       </div>
     </div>

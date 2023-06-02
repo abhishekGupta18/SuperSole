@@ -8,6 +8,7 @@ import { productReducer } from "../Reducer/ProductReducer";
 export const ShoesContext = createContext();
 
 export const ShoesContextProvider = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [showFilters, setShowFilters] = useState(true);
 
   const initialState = { shoesData: [], shoesCategory: [] };
@@ -15,6 +16,7 @@ export const ShoesContextProvider = ({ children }) => {
   const [state, productDispatch] = useReducer(productReducer, initialState);
 
   const getData = async () => {
+    setIsLoading(true);
     try {
       const { status, data } = await axios({
         method: "get",
@@ -25,6 +27,8 @@ export const ShoesContextProvider = ({ children }) => {
       }
     } catch (e) {
       console.log(e);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -52,7 +56,9 @@ export const ShoesContextProvider = ({ children }) => {
   };
 
   return (
-    <ShoesContext.Provider value={{ state, showFilters, showFiltersHandler }}>
+    <ShoesContext.Provider
+      value={{ state, showFilters, showFiltersHandler, isLoading }}
+    >
       {children}
     </ShoesContext.Provider>
   );

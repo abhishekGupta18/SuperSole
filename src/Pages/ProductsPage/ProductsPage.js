@@ -7,11 +7,14 @@ import "./ProductsPage.css";
 import { Filters } from "../../Component/Filters/Filters";
 
 import TuneIcon from "@mui/icons-material/Tune";
+import ShoesGif from "../../Asset/shoes gif.gif";
 
 export const ProductsPage = () => {
-  const { state, showFiltersHandler } = useShoesContext();
+  const { state, showFiltersHandler, isLoading } = useShoesContext();
   const { searchFilterData } = useFilterContext();
-  return (
+  return isLoading ? (
+    <img src={ShoesGif} alt="gif" className="shoes_loader" />
+  ) : (
     <div className="products_list">
       <div className="products_filters">
         {" "}

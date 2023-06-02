@@ -25,6 +25,11 @@
 .tuneIcon_btn {
   display: none;
 }
+.shoes_loader {
+  width: 50%;
+  height: 100vh;
+  margin: 0 auto;
+}
 
 @media (max-width: 768px) {
   .tuneIcon_btn {
