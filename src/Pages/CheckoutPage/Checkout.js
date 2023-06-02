@@ -48,7 +48,10 @@ export const CheckoutPage = () => {
       description: "Thank you for shopping with us",
       handler: function () {
         toast.success(`Payment of Rs. ${totalAmount} is Succesful`);
-        navigate("/");
+        navigate("/orderSuccessful");
+        setTimeout(() => {
+          navigate("/");
+        }, 5000);
         cartState.map((item) => removeFromCart(item._id));
       },
       theme: {

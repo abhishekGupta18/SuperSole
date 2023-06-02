@@ -21,6 +21,7 @@ import { AddressModal } from "./Component/AddressModal/AddressModal";
 import { CheckoutPage } from "./Pages/CheckoutPage/Checkout";
 import { ReqRouting } from "./Routing/Routing";
 import { PageNotFound } from "./Pages/PageNotFound/PageNotFound";
+import { OrderSuccessful } from "./Pages/OrderSuccessful/OrderSuccessful";
 function App() {
   return (
     <div className="App">
@@ -82,6 +83,7 @@ function App() {
             </ReqRouting>
           }
         />
+        <Route path="/orderSuccessful" element={<OrderSuccessful />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
 

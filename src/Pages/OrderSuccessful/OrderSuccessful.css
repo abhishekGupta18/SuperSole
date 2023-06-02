@@ -1,0 +1,23 @@
+.order_placed {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.order_placed p {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 0 2rem;
+}
+.order_placed img {
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .order_placed p {
+    font-size: 1.5rem;
+  }
+}
