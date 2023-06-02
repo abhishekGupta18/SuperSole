@@ -4,17 +4,29 @@ import { CardCart } from "../../Component/CartCart/CardCart";
 
 import { useCartContext } from "../../Context/CartContext";
 
+import emptyCart from "../../Asset/empty_cart.png";
+
 export const CartPage = () => {
   const navigate = useNavigate();
   const { cartState, totalCartPrice, discount, totalAmount } = useCartContext();
   return (
     <div className="cart_page">
       <ul className="cart_items_list">
-        {cartState?.map((item) => (
-          <li>
-            <CardCart {...item} />
-          </li>
-        ))}
+        {cartState?.length === 0 ? (
+          <div className="empty_cart">
+            {" "}
+            <img src={emptyCart} alt="" /> <p>Your Cart Is Empty!</p>
+            <button onClick={() => navigate("/products")}>
+              Explore the store
+            </button>
+          </div>
+        ) : (
+          cartState?.map((item) => (
+            <li>
+              <CardCart {...item} />
+            </li>
+          ))
+        )}
       </ul>
 
       {cartState?.length > 0 && (

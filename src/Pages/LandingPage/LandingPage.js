@@ -3,6 +3,7 @@ import "./LandingPage.css";
 import { useNavigate } from "react-router-dom";
 
 import { useFilterContext } from "../../Context/FiltersContext";
+import { useShoesContext } from "../../Context/DataContext";
 
 import shoesPoster from "../../Asset/poster1.png";
 import shoesPoster2 from "../../Asset/poster3.png";
@@ -19,11 +20,16 @@ import maleShoes from "../../Asset/male-shoes.jpg";
 import femaleShoes from "../../Asset/female-shoes.jpg";
 import kidShoes from "../../Asset/kids-shoes.jpg";
 
+import ShoesGif from "../../Asset/shoes gif.gif";
+
 export const LandingPage = () => {
   const { filterDispatch, filterState } = useFilterContext();
+  const { isLoading } = useShoesContext();
   const navigate = useNavigate();
 
-  return (
+  return isLoading ? (
+    <img src={ShoesGif} alt="gif" className="shoes_loader" />
+  ) : (
     <div className="landing_page">
       <div className="not_nav">
         <div>

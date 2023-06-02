@@ -26,6 +26,7 @@
   border: none;
   color: #1d4ed8;
   border-radius: 30%;
+  cursor: pointer;
 }
 .tag_line {
   display: flex;
@@ -62,7 +63,9 @@
   gap: 0.5rem;
   list-style: none;
 }
-
+.policies ul li {
+  cursor: pointer;
+}
 @media (max-width: 935px) {
   .footer_section {
     flex-wrap: wrap;

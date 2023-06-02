@@ -60,6 +60,31 @@
   border-radius: 0.5rem;
 }
 
+.empty_cart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.empty_cart img {
+  width: 70%;
+}
+.empty_cart p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.empty_cart button {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid #0ea5e9;
+  color: #0ea5e9;
+}
+.empty_cart button:hover {
+  color: #ffff;
+  background-color: #0ea5e9;
+}
 @media (max-width: 830px) {
   .cart_page {
     flex-direction: column-reverse;

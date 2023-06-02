@@ -1,4 +1,6 @@
 import "./Footer.css";
+import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -6,6 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 export const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className="footer">
       <div className="footer_section">
@@ -15,15 +18,24 @@ export const Footer = () => {
             <button>
               <InstagramIcon />
             </button>
-            <button>
-              <TwitterIcon />
-            </button>
-            <button>
-              <LinkedInIcon />
-            </button>
-            <button>
-              <GitHubIcon />
-            </button>
+            <NavLink to="https://twitter.com/Abhishek12703">
+              {" "}
+              <button>
+                <TwitterIcon />
+              </button>
+            </NavLink>
+            <NavLink to="https://www.linkedin.com/in/abhishek-gupta-23683924a/">
+              {" "}
+              <button>
+                <LinkedInIcon />
+              </button>
+            </NavLink>
+            <NavLink to="https://github.com/abhishekGupta18">
+              {" "}
+              <button>
+                <GitHubIcon />
+              </button>
+            </NavLink>
           </div>
         </div>
         <div className="tag_line">
@@ -33,10 +45,10 @@ export const Footer = () => {
         <div className="policies">
           <h3>QUICK LINKS</h3>
           <ul>
-            <li>Home</li>
-            <li>Explore</li>
-            <li>Cart</li>
-            <li>Wishlist</li>
+            <li onClick={() => navigate("/")}>Home</li>
+            <li onClick={() => navigate("/products")}>Explore</li>
+            <li onClick={() => navigate("/cart")}>Cart</li>
+            <li onClick={() => navigate("/wishlist")}>Wishlist</li>
           </ul>
         </div>
       </div>

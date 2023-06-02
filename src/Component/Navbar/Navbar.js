@@ -44,12 +44,16 @@ export const Navbar = () => {
 
           <NavLink to="/wishlist" className="show_total_wishItem">
             <FavoriteOutlinedIcon />
-            {authState?.token && <p>{wishListState?.length}</p>}
+            {authState?.token && wishListState?.length > 0 && (
+              <p>{wishListState?.length}</p>
+            )}
           </NavLink>
 
           <NavLink to="/cart" className="show_total_cartItem">
             <ShoppingCartIcon />
-            {authState?.token && <p>{cartState?.length}</p>}
+            {authState?.token && cartState?.length > 0 && (
+              <p>{cartState?.length}</p>
+            )}
           </NavLink>
         </div>
       </div>
