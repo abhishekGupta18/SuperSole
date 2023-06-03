@@ -2,7 +2,15 @@
 ## Live link - https://supersole.netlify.app/
 ### A shoes e-commerce website.
 ##
+## Demo Video - 
+
+
+https://github.com/abhishekGupta18/SuperSole/assets/112747867/f8e8cd3d-7e2b-44c9-b1f7-19ea1577c891
+
+
+
 ## Features -
+
 ###  1. Home Page
 ### 2. Product Listing Page
 ### 3. Single Product Page
@@ -23,7 +31,7 @@
 ### 14. Checkout
 ### 15. Payment Gateway
 ##
-## TECHNOLOGIES USED
+## TECHNOLOGIES USED - 
 ### FRONTEND
 #### 1. React JS (useContext, useReducer)
 #### 2. React Router v6
