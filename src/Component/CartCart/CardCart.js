@@ -35,12 +35,11 @@ export const CardCart = (item) => {
           </button>
         </div>
         <div className="cart_to_wishlist">
-          <button
-            disabled={isPresentInWishList(item) !== -1}
-            onClick={() => addToWishList(item)}
-          >
-            Add to wishlist
-          </button>
+          {isPresentInWishList(item) !== -1 ? (
+            <button className="cart_to_wishlist">Added to wishlist</button>
+          ) : (
+            <button onClick={() => addToWishList(item)}>Add to wishlist</button>
+          )}
         </div>
         <div className="remove_from_cart">
           <button onClick={() => removeFromCart(item?._id)}>
