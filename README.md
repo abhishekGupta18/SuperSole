@@ -7,8 +7,14 @@
 
 https://github.com/abhishekGupta18/SuperSole/assets/112747867/f8e8cd3d-7e2b-44c9-b1f7-19ea1577c891
 
-
-
+ ## Installation - 
+ ```   
+     
+1. git clone https://github.com/abhishekGupta18/SuperSole.git
+2. cd supersole
+3. npm install
+4. npm start
+```
 ## Features -
 
 ###  1. Home Page
