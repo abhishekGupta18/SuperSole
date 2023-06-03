@@ -30,8 +30,10 @@ export const WishListContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    getWishlist();
-  }, []);
+    if (authState?.token) {
+      getWishlist();
+    }
+  }, [authState?.token]);
 
   const addToWishList = async (wishlistData) => {
     try {

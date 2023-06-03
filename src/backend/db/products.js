@@ -8,34 +8,20 @@ import { v4 as uuid } from "uuid";
 export const products = [
   {
     _id: uuid(),
-    name: "Grandstand II Shoe Sneakers For Men  (White)",
-    brand: "NIKE",
+    name: "Stylish casual partywear women heeled boots Boots For Women  (Brown)",
+    brand: "Adidas",
     image:
-      "https://res.cloudinary.com/dmmqvo37i/image/upload/v1684137317/aa2190-100nike-10-nike-white-navy-sail-arctic-punch-original-imafvgpebjgvsyrj_uyfrb7.jpg",
-    category: "Sneakers",
-    price: "5000",
-    originalPrice: "6669",
-    rating: "3.5",
-    gender: "Men",
+      "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/i/d/p/-original-imagg3m8qtqrkga8.jpeg?q=70",
+    category: "Boots",
+    price: "2500",
+    originalPrice: "3459",
+    rating: "2.8",
+    gender: "Women",
     inStock: true,
-    reviews: "2.4k",
-    delivery: "in 6 days",
+    reviews: "96",
+    delivery: "in 2 days",
   },
-  {
-    _id: uuid(),
-    name: "EASY VULC 2.0 SS 19 Sneakers For Men  (Blue)",
-    brand: "ADIDAS",
-    image:
-      "https://rukminim1.flixcart.com/image/612/612/jvfk58w0/shoe/r/d/w/f34659-11-adidas-dkblue-ftwwht-actred-original-imafgcytfzghkeb6.jpeg?q=70",
-    category: "Sneakers",
-    price: "3699",
-    originalPrice: "4500",
-    rating: "3.2",
-    gender: "Men",
-    inStock: true,
-    reviews: "1.3k",
-    delivery: "in 6 days",
-  },
+
   {
     _id: uuid(),
     name: "Vidal E Sneakers For Men  (Black)",
@@ -68,7 +54,6 @@ export const products = [
     delivery: "in 3 days",
   },
 
-  // women sneakers
   {
     _id: uuid(),
     name: "W NKDOWNSHIFTER 12 Sneakers For Women  (White)",
@@ -116,6 +101,21 @@ export const products = [
   },
   {
     _id: uuid(),
+    name: "Grandstand II Shoe Sneakers For Men  (White)",
+    brand: "NIKE",
+    image:
+      "https://res.cloudinary.com/dmmqvo37i/image/upload/v1684137317/aa2190-100nike-10-nike-white-navy-sail-arctic-punch-original-imafvgpebjgvsyrj_uyfrb7.jpg",
+    category: "Sneakers",
+    price: "5000",
+    originalPrice: "6669",
+    rating: "3.5",
+    gender: "Men",
+    inStock: true,
+    reviews: "2.4k",
+    delivery: "in 6 days",
+  },
+  {
+    _id: uuid(),
     name: "Ivana Wn's Sneakers For Women  (Blue)",
     brand: "PUMA",
     image:
@@ -130,7 +130,6 @@ export const products = [
     delivery: "in 6 days",
   },
 
-  // kids sneakers
   {
     _id: uuid(),
     name: "Slip on Sneakers For Boys & Girls  (Yellow)",
@@ -191,8 +190,6 @@ export const products = [
     reviews: "8.9k",
     delivery: "in 1 days",
   },
-
-  // Sports Shoes for mens
 
   {
     _id: uuid(),
@@ -255,7 +252,6 @@ export const products = [
     delivery: "in 4 days",
   },
 
-  // sports shoes for womens
   {
     _id: uuid(),
     name: "Amalgo W Running Shoes For Women  (Pink)",
@@ -316,8 +312,22 @@ export const products = [
     reviews: "9.3k",
     delivery: "in 4 days",
   },
+  {
+    _id: uuid(),
+    name: "EASY VULC 2.0 SS 19 Sneakers For Men  (Blue)",
+    brand: "ADIDAS",
+    image:
+      "https://rukminim1.flixcart.com/image/612/612/jvfk58w0/shoe/r/d/w/f34659-11-adidas-dkblue-ftwwht-actred-original-imafgcytfzghkeb6.jpeg?q=70",
+    category: "Sneakers",
+    price: "3699",
+    originalPrice: "4500",
+    rating: "3.2",
+    gender: "Men",
+    inStock: true,
+    reviews: "1.3k",
+    delivery: "in 6 days",
+  },
 
-  // sports shoes for kids
   {
     _id: uuid(),
     name: "Lace Running Shoes For Boys & Girls  (Red)",
@@ -378,7 +388,7 @@ export const products = [
     reviews: "969",
     delivery: "in 6 days",
   },
-  // boots for mens
+
   {
     _id: uuid(),
     name: "Rock Casual High Tops For Men  (Black)",
@@ -441,7 +451,6 @@ export const products = [
     delivery: "in 2 days",
   },
 
-  // boots for womens
   {
     _id: uuid(),
     name: "Boots For Women  (Black)",
@@ -503,7 +512,6 @@ export const products = [
     delivery: "in 2 days",
   },
 
-  // boots for kids
   {
     _id: uuid(),
     name: "Lace Casual Boots For Boys  (Brown)",

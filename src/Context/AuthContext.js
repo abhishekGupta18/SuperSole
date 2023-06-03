@@ -1,5 +1,4 @@
-import { useReducer } from "react";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -10,12 +9,13 @@ import axios from "axios";
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
+  const localStorageItem = JSON.parse(localStorage.getItem("data"));
   const location = useLocation();
   const navigate = useNavigate();
   const [authState, authDispatch] = useReducer(authReducer, {
     isLoggedIn: false,
     userInfo: {},
-    token: null,
+    token: localStorageItem?.token || null,
   });
 
   const userSignUp = async (signUpData) => {
@@ -30,7 +30,10 @@ export const AuthContextProvider = ({ children }) => {
         authDispatch({ type: "user_login", payload: true });
         authDispatch({ type: "user_info", payload: data.createdUser });
         authDispatch({ type: "user_token", payload: data.encodedToken });
-        localStorage.setItem("userToken", data.encodedToken);
+        localStorage.setItem(
+          "data",
+          JSON.stringify({ user: data?.createdUser, token: data?.encodedToken })
+        );
         navigate("/");
       }
     } catch (e) {
@@ -49,7 +52,10 @@ export const AuthContextProvider = ({ children }) => {
         authDispatch({ type: "user_login", payload: true });
         authDispatch({ type: "user_info", payload: data.foundUser });
         authDispatch({ type: "user_token", payload: data.encodedToken });
-        localStorage.setItem("userToken", data.encodedToken);
+        localStorage.setItem(
+          "data",
+          JSON.stringify({ user: data?.foundUser, token: data?.encodedToken })
+        );
         navigate(location?.state?.from?.pathname || "/", { replace: true });
         toast.success("logged in!");
       }
@@ -63,8 +69,15 @@ export const AuthContextProvider = ({ children }) => {
     authDispatch({ type: "user_login", payload: false });
     authDispatch({ type: "user_info", payload: {} });
     authDispatch({ type: "user_token", payload: null });
-    localStorage.setItem("userToken", "");
+    localStorage.removeItem("data");
   };
+
+  useEffect(() => {
+    if (localStorageItem) {
+      authDispatch({ type: "user_info", payload: localStorageItem?.user });
+      authDispatch({ type: "user_token", payload: localStorageItem?.token });
+    }
+  }, []);
 
   return (
     <AuthContext.Provider

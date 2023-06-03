@@ -49,7 +49,9 @@ export const AddressContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    getAddresses();
+    if (authState?.token) {
+      getAddresses();
+    }
   }, [authState?.token]);
 
   const addAddress = async (addressInput) => {

@@ -19,6 +19,7 @@ export const Navbar = () => {
   const { filterDispatch, filterState } = useFilterContext();
 
   const navigate = useNavigate();
+
   return (
     <nav className="navigation">
       <div className="nav_left">

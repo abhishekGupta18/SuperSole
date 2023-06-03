@@ -38,8 +38,10 @@ export const CartContextProvider = ({ children }) => {
     }
   };
   useEffect(() => {
-    getCart();
-  }, []);
+    if (authState?.token) {
+      getCart();
+    }
+  }, [authState?.token]);
 
   const isPresentInCart = (product) =>
     cartState?.findIndex((item) => item?._id === product?._id);
