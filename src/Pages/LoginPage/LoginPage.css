@@ -30,6 +30,17 @@
   padding: 0.6rem;
   border-radius: 0.5rem;
   border: 1px solid black;
+  width: 100%;
+}
+
+.show_login_password {
+  display: flex;
+  align-items: center;
+}
+.show_login_password button {
+  border: none;
+  background: none;
+  margin-left: -4rem;
 }
 .login {
   padding: 0.6rem;

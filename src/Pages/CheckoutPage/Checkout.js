@@ -50,7 +50,7 @@ export const CheckoutPage = () => {
         toast.success(`Payment of Rs. ${totalAmount} is Succesful`);
         navigate("/orderSuccessful");
         setTimeout(() => {
-          navigate("/");
+          navigate("/products");
         }, 5000);
         cartState.map((item) => removeFromCart(item._id));
       },

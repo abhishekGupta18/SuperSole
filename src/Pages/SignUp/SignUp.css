@@ -30,6 +30,7 @@
   padding: 0.6rem;
   border-radius: 0.5rem;
   border: 1px solid black;
+  width: 100%;
 }
 .signup_btn {
   padding: 0.6rem;
@@ -40,7 +41,27 @@
   font-size: 1rem;
   border-radius: 0.5rem;
 }
+.show_signup_password {
+  display: flex;
+  align-items: center;
+}
 
+.show_signup_password button {
+  border: none;
+  background: none;
+  margin-left: -4rem;
+}
+
+.show_signup_confirm_Password {
+  display: flex;
+  align-items: center;
+}
+
+.show_signup_confirm_Password button {
+  border: none;
+  background: none;
+  margin-left: -4rem;
+}
 @media (max-width: 768px) {
   .signup_page {
     width: 25rem;

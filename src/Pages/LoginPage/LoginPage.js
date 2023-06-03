@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { toast } from "react-toastify";
 
+import { useState } from "react";
 import { useAuthContext } from "../../Context/AuthContext";
 
 import "./LoginPage.css";
-import { useState } from "react";
+
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 
 export const LoginPage = () => {
   const testUserData = {
@@ -17,6 +19,8 @@ export const LoginPage = () => {
     email: "",
     password: "",
   });
+
+  const [showLoginPassword, setShowLoginPassword] = useState(false);
 
   const handleUserLogin = (event) => {
     event.preventDefault();
@@ -41,15 +45,26 @@ export const LoginPage = () => {
         </label>
         <label>
           Password{" "}
-          <input
-            type="password"
-            required
-            placeholder="password"
-            value={loginData?.password}
-            onChange={(e) =>
-              setLoginData({ ...loginData, password: e.target.value })
-            }
-          />
+          <div className="show_login_password">
+            <input
+              type={showLoginPassword ? "text" : "password"}
+              required
+              placeholder="password"
+              value={loginData?.password}
+              onChange={(e) =>
+                setLoginData({ ...loginData, password: e.target.value })
+              }
+            />
+            {showLoginPassword ? (
+              <button onClick={() => setShowLoginPassword(!showLoginPassword)}>
+                <VisibilityIcon />
+              </button>
+            ) : (
+              <button onClick={() => setShowLoginPassword(!showLoginPassword)}>
+                <VisibilityOffIcon />
+              </button>
+            )}
+          </div>
         </label>
         <button type="submit" className="login">
           Login
