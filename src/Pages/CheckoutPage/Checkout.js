@@ -62,7 +62,7 @@ export const CheckoutPage = () => {
     const paymentObject = new window.Razorpay(options);
     paymentObject.open();
   };
-  console.log(currentAddress);
+
   return (
     <div className="checkout_page">
       <h2 className="checkout_heading">Checkout</h2>

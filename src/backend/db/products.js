@@ -9,7 +9,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Stylish casual partywear women heeled boots Boots For Women  (Brown)",
-    brand: "Adidas",
+    brand: "ADIDAS",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/i/d/p/-original-imagg3m8qtqrkga8.jpeg?q=70",
     category: "Boots",
@@ -148,7 +148,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Lace Sneakers For Boys & Girls  (Black)",
-    brand: "Adidas",
+    brand: "ADIDAS",
     image:
       "https://rukminim1.flixcart.com/image/832/832/krjjde80/kids-shoe/l/w/x/6-12037040-adidas-original-imag5awrukqfgkgx.jpeg?q=70",
     category: "Sneakers",
@@ -178,7 +178,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Velcro Casual Shoes For Boys  (White)",
-    brand: "Bata",
+    brand: "BATA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/kids-shoe/l/c/n/5-4391549-bata-original-imagh7x2gzzghwfz.jpeg?q=70",
     category: "Sneakers",
@@ -194,7 +194,7 @@ export const products = [
   {
     _id: uuid(),
     name: "NK Flex Control 4 Men's Training Shoes Training & Gym Shoes For Men  (Blue)",
-    brand: "Nike",
+    brand: "NIKE",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/e/w/w/6-cd0197-400nike-7-nike-midnight-navy-metallic-silver-black-original-imagfxg2qtgahm5n-bb.jpeg?q=70",
     category: "Sports shoes",
@@ -209,7 +209,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Harquin M Running Shoes For Men  (Black)",
-    brand: "Adidas",
+    brand: "ADIDAS",
     image:
       "https://rukminim1.flixcart.com/image/832/832/l3dcl8w0/shoe/y/1/0/8-ga1118-8-adidas-cblack-stone-actgol-original-imagegegxvk3278p.jpeg?q=70",
     category: "Sports shoes",
@@ -224,7 +224,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Sports and Oudoor Lace Up Shoes Running Shoes For Men  (Beige)",
-    brand: "Bata",
+    brand: "BATA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/l59xq4w0/shoe/s/k/d/6-833-4995-bata-beige-original-imagfzpjysegskkt.jpeg?q=70",
     category: "Sports shoes",
@@ -239,7 +239,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Hustle V2 Running Shoes For Men  (Black)",
-    brand: "Puma",
+    brand: "PUMA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/h/n/u/-original-imaghy4hpgfkemn9.jpeg?q=70",
     category: "Sports shoes",
@@ -255,7 +255,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Amalgo W Running Shoes For Women  (Pink)",
-    brand: "Adidas",
+    brand: "ADIDAS",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/r/v/x/-original-imagn9nagj9a7znz.jpeg?q=70",
     category: "Sports shoes",
@@ -270,7 +270,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Amalgo W Running Shoes For Women  (Pink)",
-    brand: "Nike",
+    brand: "NIKE",
     image:
       "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/0/i/3/8-dc3729-101-9-nike-white-metallic-silver-pure-platinum-original-imagnza5y82g2vde.jpeg?q=70",
     category: "Sports shoes",
@@ -285,7 +285,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Indoor and outdoor womens sports runninng Shoes For Women  (Maroon)",
-    brand: "Bata",
+    brand: "BATA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/kjem3rk0-0/shoe/y/x/l/5395377-9-power-maroon-original-imafyz5gdvzr5z3p.jpeg?q=70",
     category: "Sports shoes",
@@ -300,7 +300,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Softride Enzo NXT Wn's Running Shoes For Women  (Grey)",
-    brand: "Puma",
+    brand: "PUMA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/0/5/v/-original-imagz4ymp3cdshjt.jpeg?q=70",
     category: "Sports shoes",
@@ -331,7 +331,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Lace Running Shoes For Boys & Girls  (Red)",
-    brand: "Adidas",
+    brand: "ADIDAS",
     image:
       "https://rukminim1.flixcart.com/image/832/832/krjjde80/kids-shoe/b/s/y/3-13432162-adidas-original-imag5awqyr6dgcda.jpeg?q=70",
     category: "Sports shoes",
@@ -346,7 +346,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Lace Running Shoes For Boys  (Black)",
-    brand: "Bata",
+    brand: "BATA",
     image:
       "https://rukminim1.flixcart.com/image/612/612/l1jmc280/kids-shoe/y/1/j/5-4316363-bata-original-imagd2ynaevfgzhq.jpeg?q=70",
     category: "Sports shoes",
@@ -361,7 +361,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Slip on Running Shoes For Boys and Girls (Black)",
-    brand: "Nike",
+    brand: "NIKE",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/kids-shoe/r/g/t/-original-imaghugx8hpatrkg.jpeg?q=70",
     category: "Sports shoes",
@@ -376,7 +376,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Lace Football Shoes For Boys & Girls  (Black)",
-    brand: "Puma",
+    brand: "PUMA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/kids-shoe/s/h/z/2-106562-puma-original-imaggar6ygbcqunh.jpeg?q=70",
     category: "Sports shoes",
@@ -392,7 +392,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Rock Casual High Tops For Men  (Black)",
-    brand: "Puma",
+    brand: "PUMA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/6/8/8/10-na-p388708-puma-black-castlerock-team-gold-original-imagz78n9zqbmufb.jpeg?q=70",
     category: "Boots",
@@ -408,7 +408,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Boots For Men  (Brown)",
-    brand: "Bata",
+    brand: "BATA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/kwpam4w0/shoe/p/6/n/8-8044333-8-bata-brown-original-imag9bheksgzhxek.jpeg?q=70",
     category: "Boots",
@@ -423,7 +423,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Boots For Men  (Black)",
-    brand: "Nike",
+    brand: "NIKE",
     image:
       "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/v/5/b/-original-imaghvb92zkacjhq.jpeg?q=70",
     category: "Boots",
@@ -438,7 +438,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Boots For Men  (Khaki)",
-    brand: "Adidas",
+    brand: "ADIDAS",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/9/x/5/hero-boot-321-9-aadi-tan-original-imaev4r6yjwqzy5s-bb.jpeg?q=70",
     category: "Boots",
@@ -454,7 +454,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Boots For Women  (Black)",
-    brand: "Bata",
+    brand: "BATA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/7/d/c/3-6016042-3-bata-black-original-imagguehpsbtgvrr.jpeg?q=70",
     category: "Boots",
@@ -469,7 +469,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Stylish casual partywear women heeled boots Boots For Women  (Brown)",
-    brand: "Adidas",
+    brand: "ADIDAS",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/i/d/p/-original-imagg3m8qtqrkga8.jpeg?q=70",
     category: "Boots",
@@ -484,7 +484,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Ankle Boots for Women's Boots For Women  (Black)",
-    brand: "Nike",
+    brand: "NIKE",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/o/s/a/5-1101-black-myshtezia-black-original-imaghmdgmexcz92j.jpeg?q=70",
     category: "Boots",
@@ -499,7 +499,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Boots For Women  (Black)",
-    brand: "Puma",
+    brand: "PUMA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/kids-shoe/y/i/b/4-k-bt-608-stylestry-original-imagj8bpuqhfg7zs.jpeg?q=70",
     category: "Boots",
@@ -515,7 +515,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Lace Casual Boots For Boys  (Brown)",
-    brand: "Bata",
+    brand: "BATA",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/kids-shoe/y/i/b/4-k-bt-608-stylestry-original-imagj8bpuqhfg7zs.jpeg?q=70",
     category: "Boots",
@@ -530,7 +530,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Lace Casual Boots For Boys  (Brown)",
-    brand: "Adidas",
+    brand: "ADIDAS",
     image:
       "https://rukminim1.flixcart.com/image/832/832/xif0q/kids-shoe/g/5/x/8c-na-art-1003-chivalu-original-imagzk5k99quyfxf.jpeg?q=70",
     category: "Boots",
@@ -545,7 +545,7 @@ export const products = [
   {
     _id: uuid(),
     name: "Lace Casual Boots For Boys  (Black)",
-    brand: "Nike",
+    brand: "NIKE",
     image:
       "https://rukminim1.flixcart.com/image/612/612/kzzw5u80/kids-shoe/2/1/n/13-110-siya-original-imagbvqw4r5qxndr.jpeg?q=70",
     category: "Boots",

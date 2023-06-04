@@ -104,7 +104,7 @@ export const AddressContextProvider = ({ children }) => {
       console.error(e);
     }
   };
-  console.log(addressState);
+
   return (
     <AddressContext.Provider
       value={{
