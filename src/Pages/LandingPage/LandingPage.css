@@ -29,18 +29,11 @@
   font-size: 2rem;
 }
 
-.brandd_heading:hover {
-  transform: scale(1.2);
-}
-
 .category_heading {
   text-align: center;
   font-size: 2rem;
 }
 
-.category_heading:hover {
-  transform: scale(1.2);
-}
 .shop_by_category {
   display: flex;
   justify-content: center;

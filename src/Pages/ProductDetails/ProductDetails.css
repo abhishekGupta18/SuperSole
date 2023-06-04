@@ -30,7 +30,6 @@
   position: absolute;
   inset: 0 0 100% 0;
   background-color: #0ea5e9;
-  /* border-bottom-right-radius: 0.5rem; */
   border: none;
   cursor: pointer;
 }
@@ -48,7 +47,6 @@
   position: absolute;
   inset: 0 0 100% 0;
   background-color: #0ea5e9;
-  /* border-bottom-right-radius: 0.5rem; */
   border: none;
   cursor: pointer;
 }
@@ -70,7 +68,6 @@
   color: #ffff;
   font-size: 1.2rem;
   border: none;
-  /* border-top-right-radius: 0.5rem; */
 }
 .star_rating svg {
   color: #ffff;

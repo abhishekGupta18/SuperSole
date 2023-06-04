@@ -71,7 +71,9 @@ export const ProductDetail = () => {
           </span>
         </h4>
         <div className="product_detail_prices">
-          <p style={{ fontSize: "1.5rem", fontWeight: "700" }}>
+          <p
+            style={{ fontSize: "1.5rem", fontWeight: "700", color: "#16a34a" }}
+          >
             ₹{findShoe?.price}
           </p>
           <p
@@ -79,7 +81,7 @@ export const ProductDetail = () => {
               fontSize: "1.2rem",
               fontWeight: "700",
               textDecoration: "line-through",
-              color: "#64748b",
+              color: "red",
             }}
           >
             ₹{findShoe?.originalPrice}

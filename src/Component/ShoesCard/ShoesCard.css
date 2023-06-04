@@ -66,22 +66,18 @@
   gap: 0.7rem;
 }
 .barnd_name {
-  text-align: center;
   font-family: "Rokkitt", Georgia, serif;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4b5563;
 }
 .product_name {
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
+
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
-.product_name:hover {
-  display: block;
 }
 
 .prices {
@@ -92,6 +88,7 @@
 .cur_price {
   font-weight: 700;
   font-size: 1rem;
+  color: #16a34a;
 }
 
 .orig_price {
