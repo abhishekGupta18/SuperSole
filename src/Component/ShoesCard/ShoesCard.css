@@ -87,6 +87,7 @@
 .prices {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 .cur_price {
   font-weight: 700;
@@ -97,7 +98,7 @@
   font-weight: 700;
   font-size: 0.8rem;
   text-decoration: line-through;
-  color: #64748b;
+  color: red;
 }
 .rating_review {
   display: flex;

@@ -55,6 +55,7 @@
   color: black;
   font-family: Nunito sans-serif;
   letter-spacing: 0.2rem;
+  cursor: pointer;
 }
 .explore_link:hover {
   color: #2563eb;
@@ -69,29 +70,16 @@
   font-size: 1.2rem;
   font-family: Nunito sans-serif;
   letter-spacing: 0.2rem;
+  cursor: pointer;
 }
 .login_btn:hover {
   color: #2563eb;
 }
 
-/* .show_total_item {
-  position: relative;
-} */
-/* .nav_btn svg {
-  font-size: 1.8rem;
-  color: black;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.nav_btn svg:hover {
-  color: #2563eb;
-  transform: scale(1.05);
-} */
-
 .user_profile_icon svg {
   font-size: 1.8rem;
   color: black;
+  cursor: pointer;
 }
 
 .user_profile_icon svg:hover {

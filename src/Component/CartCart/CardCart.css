@@ -75,6 +75,7 @@
   border-radius: 0.2rem;
   color: #ffff;
   background-color: #6b7280;
+  cursor: pointer;
 }
 .dec_quantity {
   padding: 0 0.4rem;
@@ -84,6 +85,7 @@
   border-radius: 0.2rem;
   color: #ffff;
   background-color: #6b7280;
+  cursor: pointer;
 }
 .actual_quantity {
   border: 0.1px solid #6b7280;
@@ -102,6 +104,7 @@
   font-weight: 700;
   font-size: 1rem;
   width: 100%;
+  cursor: pointer;
 }
 .remove_from_cart button:hover {
   border: 2px solid #ef4444;
@@ -117,6 +120,7 @@
   font-weight: 700;
   font-size: 1rem;
   width: 100%;
+  cursor: pointer;
 }
 .cart_to_wishlist button:hover {
   color: #ffff;

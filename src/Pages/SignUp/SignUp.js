@@ -16,7 +16,7 @@ export const SignUp = () => {
     name: "",
     email: "",
     password: "",
-    confirmPassword: true,
+    confirmPassword: "",
   });
 
   const [showPassword, setShowPassword] = useState({
@@ -26,8 +26,11 @@ export const SignUp = () => {
 
   const handleUserSignUp = (event) => {
     event.preventDefault();
-    userSignUp(signUpData);
-    toast.success("Signed up!");
+    if (signUpData?.confirmPassword === signUpData?.password) {
+      userSignUp(signUpData);
+    } else {
+      toast.error("write correct passwords");
+    }
   };
 
   return (
@@ -39,6 +42,7 @@ export const SignUp = () => {
           <input
             type="text"
             required
+            name="name"
             placeholder="name"
             value={signUpData?.name}
             onChange={(e) =>
@@ -51,6 +55,7 @@ export const SignUp = () => {
           <input
             required
             type="email"
+            name="email"
             placeholder="email"
             value={signUpData?.email}
             onChange={(e) =>
@@ -64,6 +69,7 @@ export const SignUp = () => {
             <input
               required
               type={showPassword?.password ? "text" : "password"}
+              name="password"
               placeholder="password"
               value={signUpData?.password}
               onChange={(e) =>
@@ -72,23 +78,25 @@ export const SignUp = () => {
             />
             {showPassword.password ? (
               <button
-                onClick={() =>
+                onClick={(e) => {
                   setShowPassword({
                     ...showPassword,
                     password: !showPassword.password,
-                  })
-                }
+                  });
+                  e.preventDefault();
+                }}
               >
                 <VisibilityIcon />
               </button>
             ) : (
               <button
-                onClick={() =>
+                onClick={(e) => {
                   setShowPassword({
                     ...showPassword,
                     password: !showPassword.password,
-                  })
-                }
+                  });
+                  e.preventDefault();
+                }}
               >
                 <VisibilityOffIcon />
               </button>
@@ -101,41 +109,43 @@ export const SignUp = () => {
             <input
               type={showPassword?.confirmPassword ? "text" : "password"}
               placeholder="confirm password"
+              name="confirmPassword"
               required
               onChange={(e) =>
                 setSignUpData({
                   ...signUpData,
-                  confirmPassword:
-                    signUpData.password === e.target.value ? true : false,
+                  confirmPassword: e.target.value,
                 })
               }
             />
             {showPassword.confirmPassword ? (
               <button
-                onClick={() =>
+                type="submit"
+                onClick={(e) => {
                   setShowPassword({
                     ...showPassword,
                     confirmPassword: !showPassword.confirmPassword,
-                  })
-                }
+                  });
+                  e.preventDefault();
+                }}
               >
                 <VisibilityIcon />
               </button>
             ) : (
               <button
-                onClick={() =>
+                onClick={(e) => {
                   setShowPassword({
                     ...showPassword,
                     confirmPassword: !showPassword.confirmPassword,
-                  })
-                }
+                  });
+                  e.preventDefault();
+                }}
               >
                 <VisibilityOffIcon />
               </button>
             )}
           </div>
         </label>
-        {!signUpData.confirmPassword && <p> password doesn't match</p>}
         <button type="submit" className="signup_btn">
           Create new account
         </button>

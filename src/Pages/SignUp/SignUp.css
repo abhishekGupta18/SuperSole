@@ -49,7 +49,7 @@
 .show_signup_password button {
   border: none;
   background: none;
-  margin-left: -4rem;
+  margin-left: -2.5rem;
 }
 
 .show_signup_confirm_Password {
@@ -60,7 +60,7 @@
 .show_signup_confirm_Password button {
   border: none;
   background: none;
-  margin-left: -4rem;
+  margin-left: -2.5rem;
 }
 @media (max-width: 768px) {
   .signup_page {

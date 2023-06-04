@@ -58,6 +58,7 @@
   border: none;
   color: #ffff;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .empty_cart {
@@ -80,6 +81,7 @@
   font-weight: 700;
   border: 1px solid #0ea5e9;
   color: #0ea5e9;
+  cursor: pointer;
 }
 .empty_cart button:hover {
   color: #ffff;

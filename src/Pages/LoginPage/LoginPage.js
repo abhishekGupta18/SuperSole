@@ -56,11 +56,21 @@ export const LoginPage = () => {
               }
             />
             {showLoginPassword ? (
-              <button onClick={() => setShowLoginPassword(!showLoginPassword)}>
+              <button
+                onClick={(e) => {
+                  setShowLoginPassword(!showLoginPassword);
+                  e.preventDefault();
+                }}
+              >
                 <VisibilityIcon />
               </button>
             ) : (
-              <button onClick={() => setShowLoginPassword(!showLoginPassword)}>
+              <button
+                onClick={(e) => {
+                  setShowLoginPassword(!showLoginPassword);
+                  e.preventDefault();
+                }}
+              >
                 <VisibilityOffIcon />
               </button>
             )}

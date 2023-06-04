@@ -35,6 +35,7 @@ export const AuthContextProvider = ({ children }) => {
           JSON.stringify({ user: data?.createdUser, token: data?.encodedToken })
         );
         navigate("/");
+        toast.success("Signed up!");
       }
     } catch (e) {
       console.error(e);

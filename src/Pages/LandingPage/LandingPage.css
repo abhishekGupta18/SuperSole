@@ -83,6 +83,7 @@
   font-size: 1rem;
   border: 0.5px solid black;
   transition: all 0.5;
+  cursor: pointer;
 }
 .category_btn:hover {
   transform: scale(1.05);

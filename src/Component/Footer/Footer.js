@@ -15,16 +15,13 @@ export const Footer = () => {
         <div className="social_links">
           <h3>CONNECT WITH ME</h3>
           <div className="social_btn">
-            <button>
-              <InstagramIcon />
-            </button>
             <NavLink to="https://twitter.com/Abhishek12703">
               {" "}
               <button>
                 <TwitterIcon />
               </button>
             </NavLink>
-            <NavLink to="https://www.linkedin.com/in/abhishek-gupta-23683924a/">
+            <NavLink to="https://www.linkedin.com/in/abhishekgupta12703/">
               {" "}
               <button>
                 <LinkedInIcon />
