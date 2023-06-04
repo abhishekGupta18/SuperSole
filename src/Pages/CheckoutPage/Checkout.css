@@ -102,6 +102,7 @@
   border: none;
   color: #ffff;
   background-color: #3b82f6;
+  cursor: pointer;
 }
 .place_order_btn:hover {
   background-color: #2563eb;
