@@ -1,5 +1,6 @@
 import { useCartContext } from "../../Context/CartContext";
 import { useWishListContext } from "../../Context/WishListContext";
+import { toast } from "react-toastify";
 import "./CardCart.css";
 
 export const CardCart = (item) => {
@@ -42,7 +43,12 @@ export const CardCart = (item) => {
           )}
         </div>
         <div className="remove_from_cart">
-          <button onClick={() => removeFromCart(item?._id)}>
+          <button
+            onClick={() => {
+              removeFromCart(item?._id);
+              toast.error("item is removed from cart");
+            }}
+          >
             Remove from cart
           </button>
         </div>

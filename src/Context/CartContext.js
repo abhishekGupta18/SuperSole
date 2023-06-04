@@ -74,7 +74,7 @@ export const CartContextProvider = ({ children }) => {
 
       if (status === 200) {
         cartDispatch({ type: "get_cart", payload: data?.cart });
-        toast.error("item is removed from cart");
+        // toast.error("item is removed from cart");
       }
     } catch (e) {
       console.error(e);
