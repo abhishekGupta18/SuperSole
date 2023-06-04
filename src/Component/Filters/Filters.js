@@ -82,9 +82,9 @@ export const Filters = () => {
         <label>
           <input
             type="checkbox"
-            checked={filterState?.brands?.includes("Nike")}
+            checked={filterState?.brands?.includes("NIKE")}
             onClick={() =>
-              filterDispatch({ type: "filter_by_brand", payload: "Nike" })
+              filterDispatch({ type: "filter_by_brand", payload: "NIKE" })
             }
           />
           Nike
@@ -92,9 +92,9 @@ export const Filters = () => {
         <label>
           <input
             type="checkbox"
-            checked={filterState?.brands?.includes("Adidas")}
+            checked={filterState?.brands?.includes("ADIDAS")}
             onClick={() =>
-              filterDispatch({ type: "filter_by_brand", payload: "Adidas" })
+              filterDispatch({ type: "filter_by_brand", payload: "ADIDAS" })
             }
           />
           Adidas
@@ -102,9 +102,9 @@ export const Filters = () => {
         <label>
           <input
             type="checkbox"
-            checked={filterState?.brands?.includes("Bata")}
+            checked={filterState?.brands?.includes("BATA")}
             onClick={() =>
-              filterDispatch({ type: "filter_by_brand", payload: "Bata" })
+              filterDispatch({ type: "filter_by_brand", payload: "BATA" })
             }
           />
           Bata
@@ -112,9 +112,9 @@ export const Filters = () => {
         <label>
           <input
             type="checkbox"
-            checked={filterState?.brands?.includes("Puma")}
+            checked={filterState?.brands?.includes("PUMA")}
             onClick={() =>
-              filterDispatch({ type: "filter_by_brand", payload: "Puma" })
+              filterDispatch({ type: "filter_by_brand", payload: "PUMA" })
             }
           />
           Puma
