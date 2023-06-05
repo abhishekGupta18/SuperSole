@@ -21,18 +21,18 @@ export const CardCart = (item) => {
         <div className="cart_quantity">
           <p style={{ fontSize: "1rem" }}>Quantity:</p>
           <button
-            className="inc_quantity"
-            onClick={() => changeCartQuantity(item?._id, "increment")}
-          >
-            +
-          </button>
-          <p className="actual_quantity">{item?.qty}</p>
-          <button
             className="dec_quantity"
             disabled={item?.qty === 1}
             onClick={() => changeCartQuantity(item?._id, "decrement")}
           >
             -
+          </button>
+          <p className="actual_quantity">{item?.qty}</p>
+          <button
+            className="inc_quantity"
+            onClick={() => changeCartQuantity(item?._id, "increment")}
+          >
+            +
           </button>
         </div>
         <div className="cart_to_wishlist">

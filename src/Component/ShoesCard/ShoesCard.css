@@ -27,6 +27,7 @@
   height: 100%;
   object-fit: fill;
 }
+
 .wish_list_btn {
   display: flex;
   align-items: center;
@@ -74,7 +75,6 @@
 .product_name {
   font-size: 1rem;
   font-weight: 700;
-
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

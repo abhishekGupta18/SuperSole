@@ -2,12 +2,15 @@ import "./Footer.css";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import ArrowCircleUpOutlinedIcon from "@mui/icons-material/ArrowCircleUpOutlined";
 
 export const Footer = () => {
+  const goToTopBtnHandler = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
   const navigate = useNavigate();
   return (
     <div className="footer">
@@ -62,7 +65,10 @@ export const Footer = () => {
       >
         Copyright ©2023 All rights reserved | This template is made by{" "}
         <span style={{ color: "#2563eb" }}> Abhishek Gupta❤️</span>
-      </p>
+      </p>{" "}
+      <div className="upward_icon" onClick={goToTopBtnHandler}>
+        <ArrowCircleUpOutlinedIcon />
+      </div>
     </div>
   );
 };

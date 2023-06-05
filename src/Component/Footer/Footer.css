@@ -1,3 +1,6 @@
+.footer {
+  position: relative;
+}
 .footer_section {
   display: flex;
   gap: 2rem;
@@ -19,7 +22,7 @@
 .social_btn {
   display: flex;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 .social_btn button {
   background-color: none;
@@ -66,13 +69,26 @@
 .policies ul li {
   cursor: pointer;
 }
-@media (max-width: 935px) {
+
+.upward_icon {
+  position: absolute;
+  left: 95%;
+  bottom: 50%;
+}
+.upward_icon svg {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+@media (max-width: 925px) {
   .footer_section {
     flex-wrap: wrap;
   }
   .tag_line {
     margin: 0 auto;
     order: 3;
+  }
+  .upward_icon {
+    left: 88%;
   }
 }
 
