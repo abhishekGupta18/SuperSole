@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
 
 import { useCartContext } from "../../Context/CartContext";
 import { useAuthContext } from "../../Context/AuthContext";
@@ -11,11 +12,26 @@ import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 export const ShoesCard = (item) => {
+  const addCartRef = useRef();
   const { addToCart, isPresentInCart } = useCartContext();
   const { addToWishList, isPresentInWishList, removeFromWishlist } =
     useWishListContext();
   const { authState } = useAuthContext();
   const navigate = useNavigate();
+
+  const DelayHandler = (actionHandler, duration) => {
+    clearTimeout(addCartRef.current);
+    addCartRef.current = setTimeout(() => {
+      actionHandler(item);
+    }, duration);
+  };
+
+  const DelayHandleRemoveWishlist = (actionHandler, duration) => {
+    clearTimeout(addCartRef.current);
+    addCartRef.current = setTimeout(() => {
+      actionHandler(item?._id);
+    }, duration);
+  };
 
   return (
     <NavLink className="shoes_card" to={`/shoeDetails/${item?._id}`}>
@@ -34,7 +50,9 @@ export const ShoesCard = (item) => {
             className="wish_list_btn"
             onClick={(e) => {
               e.preventDefault();
-              authState?.token ? addToWishList(item) : navigate("/login");
+              authState?.token
+                ? DelayHandler(addToWishList, 600)
+                : navigate("/login");
             }}
           >
             <FavoriteOutlinedIcon></FavoriteOutlinedIcon>
@@ -44,7 +62,7 @@ export const ShoesCard = (item) => {
             className="remove_from_wishlist"
             onClick={(e) => {
               e.preventDefault();
-              removeFromWishlist(item?._id);
+              DelayHandleRemoveWishlist(removeFromWishlist, 600);
             }}
           >
             <FavoriteOutlinedIcon></FavoriteOutlinedIcon>
@@ -69,7 +87,9 @@ export const ShoesCard = (item) => {
             className="add_cart_btn"
             onClick={(e) => {
               e.preventDefault();
-              authState?.token ? addToCart(item) : navigate("/login");
+              authState?.token
+                ? DelayHandler(addToCart, 600)
+                : navigate("/login");
             }}
           >
             <ShoppingCartIcon />

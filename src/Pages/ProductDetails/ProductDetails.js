@@ -1,6 +1,7 @@
 import "./ProductDetails.css";
 
 import { NavLink } from "react-router-dom";
+import { useRef } from "react";
 
 import { useShoesContext } from "../../Context/DataContext";
 import { useCartContext } from "../../Context/CartContext";
@@ -12,6 +13,7 @@ import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 export const ProductDetail = () => {
+  const productDetailRef = useRef();
   const { addToCart, isPresentInCart } = useCartContext();
   const { addToWishList, isPresentInWishList, removeFromWishlist } =
     useWishListContext();
@@ -20,6 +22,19 @@ export const ProductDetail = () => {
 
   const findShoe = state?.shoesData?.find((item) => item?._id == shoeId);
 
+  const delayHandler = (actionHandler, duration) => {
+    clearTimeout(productDetailRef.current);
+    productDetailRef.current = setTimeout(() => {
+      actionHandler(findShoe);
+    }, duration);
+  };
+  const delayHandleRemoveWishlist = (actionHandler, duration) => {
+    clearTimeout(productDetailRef.current);
+    productDetailRef.current = setTimeout(() => {
+      actionHandler(findShoe?._id);
+    }, duration);
+  };
+
   return (
     <div className="product_detail">
       <div className="img_container">
@@ -27,7 +42,7 @@ export const ProductDetail = () => {
         {isPresentInWishList(findShoe) === -1 ? (
           <button
             className="add_to_wishlist"
-            onClick={() => addToWishList(findShoe)}
+            onClick={() => delayHandler(addToWishList, 600)}
           >
             <FavoriteOutlinedIcon />
           </button>
@@ -35,7 +50,7 @@ export const ProductDetail = () => {
           <button
             className="remove_wishlist"
             onClick={(e) => {
-              removeFromWishlist(findShoe?._id);
+              delayHandleRemoveWishlist(removeFromWishlist, 600);
             }}
           >
             <FavoriteOutlinedIcon></FavoriteOutlinedIcon>
@@ -107,7 +122,7 @@ export const ProductDetail = () => {
         ) : (
           <button
             className="add_cart"
-            onClickCapture={() => addToCart(findShoe)}
+            onClickCapture={() => delayHandler(addToCart, 600)}
           >
             {" "}
             <ShoppingCartIcon /> Add to cart

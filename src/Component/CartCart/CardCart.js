@@ -1,11 +1,35 @@
 import { useCartContext } from "../../Context/CartContext";
 import { useWishListContext } from "../../Context/WishListContext";
+import { useRef } from "react";
 import { toast } from "react-toastify";
 import "./CardCart.css";
+import { duration } from "@mui/material";
 
 export const CardCart = (item) => {
+  const cartQuantityRef = useRef();
   const { removeFromCart, changeCartQuantity } = useCartContext();
   const { addToWishList, isPresentInWishList } = useWishListContext();
+
+  const cartDecDelayHandler = (actionHandler, duration) => {
+    clearTimeout(cartQuantityRef.current);
+    cartQuantityRef.current = setTimeout(() => {
+      actionHandler(item?._id, "decrement");
+    }, duration);
+  };
+  const cartIncDelayHandler = (actionHandler, duration) => {
+    clearTimeout(cartQuantityRef.current);
+    cartQuantityRef.current = setTimeout(() => {
+      actionHandler(item?._id, "increment");
+    }, duration);
+  };
+
+  const delayInWishList = (actionHandler, duration) => {
+    clearTimeout(cartQuantityRef.current);
+    cartQuantityRef.current = setTimeout(() => {
+      actionHandler(item);
+    }, duration);
+  };
+
   return (
     <div className="cart_card">
       <div className="cart_img_container">
@@ -23,14 +47,14 @@ export const CardCart = (item) => {
           <button
             className="dec_quantity"
             disabled={item?.qty === 1}
-            onClick={() => changeCartQuantity(item?._id, "decrement")}
+            onClick={() => cartDecDelayHandler(changeCartQuantity, 600)}
           >
             -
           </button>
           <p className="actual_quantity">{item?.qty}</p>
           <button
             className="inc_quantity"
-            onClick={() => changeCartQuantity(item?._id, "increment")}
+            onClick={() => cartIncDelayHandler(changeCartQuantity, 600)}
           >
             +
           </button>
@@ -39,7 +63,9 @@ export const CardCart = (item) => {
           {isPresentInWishList(item) !== -1 ? (
             <button className="cart_to_wishlist">Added to wishlist</button>
           ) : (
-            <button onClick={() => addToWishList(item)}>Add to wishlist</button>
+            <button onClick={() => delayInWishList(addToWishList, 600)}>
+              Add to wishlist
+            </button>
           )}
         </div>
         <div className="remove_from_cart">
