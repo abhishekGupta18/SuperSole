@@ -33,6 +33,7 @@
 
 .price_filter input {
   width: 10rem;
+  cursor: pointer;
 }
 .price_filter h3 {
   font-weight: 500;
@@ -53,6 +54,12 @@
 .category_filter h3 {
   font-weight: 500;
 }
+.category_filter label {
+  cursor: pointer;
+}
+.category_filter label input {
+  cursor: pointer;
+}
 .brand_filter {
   display: flex;
   flex-direction: column;
@@ -61,14 +68,20 @@
 .brand_filter h3 {
   font-weight: 500;
 }
-
+.brand_filter label {
+  cursor: pointer;
+}
+.brand_filter label input {
+  cursor: pointer;
+}
 .rating_filter {
+  width: 10rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.rating_filter {
-  width: 10rem;
+.rating_filter input {
+  cursor: pointer;
 }
 .rating_filter h3 {
   font-weight: 500;
@@ -88,6 +101,10 @@
   gap: 0.7rem;
   font-size: 0.9rem;
   color: #1e293b;
+  cursor: pointer;
+}
+.filters label input {
+  cursor: pointer;
 }
 .cancel_btn {
   display: none;

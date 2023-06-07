@@ -45,7 +45,7 @@ export const Filters = () => {
       <hr />
       <div className="category_filter">
         <h3>Categories</h3>
-        <label htmlFor="">
+        <label>
           <input
             type="checkbox"
             checked={filterState?.category?.includes("Men")}
@@ -55,7 +55,7 @@ export const Filters = () => {
           />
           Men
         </label>
-        <label htmlFor="">
+        <label>
           <input
             type="checkbox"
             checked={filterState?.category?.includes("Women")}
@@ -65,7 +65,7 @@ export const Filters = () => {
           />
           Women
         </label>
-        <label htmlFor="">
+        <label>
           <input
             type="checkbox"
             checked={filterState?.category?.includes("Kids")}
