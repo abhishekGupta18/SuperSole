@@ -63,8 +63,8 @@ export const Footer = () => {
           textAlign: "center",
         }}
       >
-        Copyright ©2023 All rights reserved | This template is made by{" "}
-        <span style={{ color: "#2563eb" }}> Abhishek Gupta❤️</span>
+        Copyright ©2023 All rights reserved | This template is made by Abhishek
+        Gupta.
       </p>{" "}
       <div className="upward_icon" onClick={goToTopBtnHandler}>
         <ArrowCircleUpOutlinedIcon />

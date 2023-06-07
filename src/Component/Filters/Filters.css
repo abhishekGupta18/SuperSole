@@ -19,6 +19,7 @@
   padding: 0.3rem;
   border-radius: 5px;
   cursor: pointer;
+  border: 1px solid #0ea5e9;
 }
 .clear_btn:hover {
   background-color: #ffff;
@@ -109,8 +110,6 @@
 .cancel_btn {
   display: none;
 }
-
-/* new className Style */
 
 @media (max-width: 768px) {
   .filters {
