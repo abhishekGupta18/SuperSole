@@ -6,13 +6,13 @@ import { useAddressContext } from "../../Context/AddressContext";
 import { useState } from "react";
 import { toast } from "react-toastify";
 const dummyAddress = {
-  name: "Aditi Shah",
-  street: "7, G.N. Road",
-  city: "Mumbai",
-  zipcode: "986435",
-  state: "Maharashtra",
+  name: "Sourav Gupta",
+  street: "7, C.L Road",
+  city: "Rewa",
+  zipcode: "486001",
+  state: "M.P",
   country: "India",
-  mobile: "9568751239",
+  mobile: "9956324789",
 };
 
 export const AddressModal = () => {
